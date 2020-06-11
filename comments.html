@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8" />
+        <title>Werkly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./vendors/metis-menu/dist/metismenujs.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css" />
+    </head>
+
+    <body class="white">
+        <div class="MainContent">
+            <!-- ===== Comments ===== -->
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <p class="label">Comment input</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Comment">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button secondary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Comment input with attachment button</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Comment">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                            <div class="online-indicator"></div>
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button secondary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                            <button class="Button icon attach">
+                                <img src="./resources/images/icon-black.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Comment posted (active user)</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Comment active">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                            <div class="online-indicator"></div>
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button primary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago">3 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Comment posted (other user)</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Comment active">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button primary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago">3 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Comment posted (with attachments)</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Comment active">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button primary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments">
+                                <div class="item">
+                                    <img src="./resources/images/icon-black.svg" alt="send icon" width="13" height="13" />
+                                    <span>filename.jpg</span>
+                                </div>
+                                <div class="item">
+                                    <img src="./resources/images/icon-black.svg" alt="send icon" width="13" height="13" />
+                                    <span>filename.jpg</span>
+                                </div>
+                                <div class="item">
+                                    <img src="./resources/images/icon-black.svg" alt="send icon" width="13" height="13" />
+                                    <span>filename.jpg</span>
+                                </div>
+                                <div class="item">
+                                    <img src="./resources/images/icon-black.svg" alt="send icon" width="13" height="13" />
+                                    <span>filename.jpg</span>
+                                </div>
+                                <div class="item">
+                                    <img src="./resources/images/icon-black.svg" alt="send icon" width="13" height="13" />
+                                    <span>filename.jpg</span>
+                                </div>
+                                <div class="item">
+                                    <img src="./resources/images/icon-black.svg" alt="send icon" width="13" height="13" />
+                                    <span>filename.jpg</span>
+                                </div>
+                                <div class="item">
+                                    <img src="./resources/images/icon-black.svg" alt="send icon" width="13" height="13" />
+                                    <span>filename.jpg</span>
+                                </div>
+                            </div>
+                            <span class="time-ago">3 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Reply to comment</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Comment active">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button primary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago">3 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="Comment reply">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button secondary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Comment nested (with reply)</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Comment active">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                            <div class="online-indicator"></div>
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button primary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago">3 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="Comment active reply">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button primary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago">3 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="Comment active reply">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button primary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago">3 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="Comment reply">
+                        <div class="user-information">
+                            <img class="Avatar" src="./resources/images/avatar.png" alt="avatar" />
+                        </div>
+                        <textarea class="Input comment-input" placeholder="Type your comment here..."></textarea>
+                        <div class="action-buttons">
+                            <button class="Button secondary icon send">
+                                <img src="./resources/images/icon-white.svg" alt="send icon" width="13" height="13" />
+                            </button>
+                        </div>
+
+                        <div class="comment-details">
+                            <div class="attachments"></div>
+                            <span class="time-ago"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vendor JS -->
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+        <script src="./vendors/jquery/jquery.min.js"></script>
+        <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="./vendors/metis-menu/dist/metismenujs.min.js"></script>
+
+        <script src="./vendors/semantic-ui/transition.min.js"></script>
+        <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
+
+        <script src="./vendors/ckeditor/ckeditor.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./resources/js/main.js"></script>
+    </body>
+</html>

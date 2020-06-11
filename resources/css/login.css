@@ -2,6 +2,20 @@
   height: 100%;
   width: 100%;
 }
-.Login .left-side {
-  background-image: url("/resources/images/login-left-graphic.png");
+.Login .row {
+  height: 100%;
+}
+.Login .graphic {
+  background-image: url("../images/login-left-graphic.png");
+  background-size: cover;
+  background-position: center;
+}
+.Login .form {
+  padding-top: 40px;
+  padding-right: 40px;
+}
+.Login .form .logo {
+  width: 264px;
+  position: absolute;
+  right: 40px;
 }

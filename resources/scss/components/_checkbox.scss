@@ -1,0 +1,30 @@
+.Checkbox {
+    label {
+        @include flex(flex-start, center);
+        max-width: 200px;
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: 400;
+
+        input {
+            display: none;
+        }
+
+        span {
+            margin-right: 10px;
+            height: 22px;
+            width: 22px;
+            border: 1px solid $dark;
+            display: inline-block;
+            position: relative;
+        }
+    }
+
+    [type="checkbox"]:checked + span:before {
+        content: url(../images/check.svg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1px;
+    }
+}

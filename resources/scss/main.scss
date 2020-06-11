@@ -1,12 +1,56 @@
 // vendors
-@import './vendors/vendors';
+@import "./vendors/vendors";
 
 // abstracts
-@import './abstracts/variables';
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 
 // layout
-@import './layout/header';
-@import './layout/content';
-@import './layout/footer';
+@import "./layout/header";
+@import "./layout/content";
+@import "./layout/footer";
 
-// layout
+// components
+@import "./components/box";
+@import "./components/button";
+@import "./components/input";
+@import "./components/select";
+@import "./components/tooltip";
+@import "./components/switch";
+@import "./components/slider";
+@import "./components/radio-button";
+@import "./components/checkbox";
+@import "./components/action-required";
+@import "./components/comment";
+@import "./components/avatar";
+
+* {
+    font-family: $primary-font;
+}
+
+body {
+    background-color: $gray-1;
+    height: 100vh;
+    width: 100vw;
+
+    &.white {
+        background-color: white;
+    }
+}
+
+p.label {
+    margin: 0;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+[data-tippy-root] {
+    .tippy-box {
+        border-radius: 8px;
+
+        .tippy-content {
+            font-size: 11px;
+        }
+    }
+}
