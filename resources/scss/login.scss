@@ -1,0 +1,10 @@
+@import './main.scss';
+
+.Login {
+  height: 100%;
+  width: 100%;
+
+  .left-side {
+    background-image: url('/resources/images/login-left-graphic.png');
+  }
+}
