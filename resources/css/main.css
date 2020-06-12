@@ -339,6 +339,7 @@
 
 .MainContent {
   padding: 20px 20px 40px;
+  min-height: 70vh;
 }
 
 .Footer {
