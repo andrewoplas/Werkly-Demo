@@ -12,6 +12,10 @@
     background-color: white;
     outline: 0 !important;
 
+    &.block {
+        max-width: 100%;
+    }
+
     &.primary {
         background-color: $primary-color;
         border: 0 !important;
@@ -120,6 +124,10 @@
 
         &.selected {
             background-color: $gray-1;
+        }
+
+        &.block {
+            max-width: 100%;
         }
 
         .arrow {

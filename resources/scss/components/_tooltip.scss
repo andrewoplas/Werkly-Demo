@@ -1,6 +1,6 @@
 .Tooltip {
-    width: 20px;
-    height: 20px;
+    padding: 2px;
     background-color: $dark;
     border-radius: 50%;
+    @include flex(center, center);
 }

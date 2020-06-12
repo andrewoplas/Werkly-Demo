@@ -338,12 +338,29 @@
 }
 
 .MainContent {
-  padding: 20px;
+  padding: 20px 20px 40px;
+}
+
+.Footer {
+  height: 45px;
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.Footer .text {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  color: white;
 }
 
 .ContentBox {
   min-height: 170px;
-  padding: 5px 20px 15px 20px;
+  padding: 10px 20px 20px 20px;
   background-color: white;
   border-radius: 8px;
 }
@@ -429,7 +446,7 @@
 }
 .ContentBox hr {
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border-color: #cccccc;
 }
 
@@ -446,6 +463,9 @@
   border-radius: 4px;
   background-color: white;
   outline: 0 !important;
+}
+.Button.block {
+  max-width: 100%;
 }
 .Button.primary {
   background-color: #0d2c54;
@@ -546,6 +566,9 @@
 }
 .ButtonCluster .item.selected {
   background-color: #eeeeee;
+}
+.ButtonCluster .item.block {
+  max-width: 100%;
 }
 .ButtonCluster .item .arrow {
   margin-left: auto;
@@ -709,10 +732,13 @@ select.Select:disabled,
 }
 
 .Tooltip {
-  width: 20px;
-  height: 20px;
+  padding: 2px;
   background-color: #333333;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 /* The switch - the box around the slider */
@@ -721,6 +747,7 @@ select.Select:disabled,
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin-bottom: 0;
   /* Hide default HTML checkbox */
   /* The slider */
   /* Rounded sliders */

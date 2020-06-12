@@ -9,6 +9,11 @@ const initializeMobileNavMenu = (query) => {
     });
 };
 
+function initializePage() {
+    initializeMobileNavMenu(".mobile-nav #menu");
+    initializeMobileNavMenu(".page-header-mobile #page-header-menu");
+}
+
 function outputUpdate(value, minValue, maxValue) {
     var output = document.querySelector("#value");
     output.value = value;
@@ -117,5 +122,20 @@ function initializeDataTables() {
         row.find("input").val("").prop("checked", false);
         row.removeClass("cloneable-row");
         row.appendTo(tbody);
+    });
+}
+
+function initializeLayout1() {
+    $(document).ready(function () {
+        $(".ui.dropdown").dropdown();
+        tippy(".Tooltip", { maxWidth: 160 });
+
+        CKEDITOR.replace("editor1");
+
+        // Switch display value
+        $(".Switch input").on("change", function () {
+            const isChecked = $(this).is(":checked");
+            $("#switch-value").text(isChecked ? "On" : "Off");
+        });
     });
 }
