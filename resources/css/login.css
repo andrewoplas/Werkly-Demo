@@ -640,11 +640,11 @@
 
 .ButtonCluster .item {
   width: 100%;
-  max-width: 250px;
+  max-width: 330px;
   height: 45px;
   text-align: left;
   padding-left: 20px;
-  padding-right: 10px;
+  padding-right: 20px;
   background-color: white;
   border: 1px solid #cccccc;
   border-bottom: 0;
@@ -1089,6 +1089,7 @@ select.Select:disabled,
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
   font-weight: 300;
+  outline: 0;
 }
 @media (max-width: 575.98px) {
   .ActionRequired button {

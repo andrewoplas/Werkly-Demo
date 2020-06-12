@@ -39,6 +39,7 @@
         font-family: $secondary-font;
         font-size: 14px;
         font-weight: 300;
+        outline: 0;
 
         @include media-breakpoint-down(xs) {
             margin-top: 20px;
