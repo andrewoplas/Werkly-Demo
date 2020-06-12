@@ -5,6 +5,7 @@
         font-family: $primary-font;
         font-size: 14px;
         font-weight: 400;
+        margin-bottom: 0;
 
         input {
             display: none;
@@ -18,13 +19,13 @@
             display: inline-block;
             position: relative;
         }
-    }
 
-    [type="checkbox"]:checked + span:before {
-        content: url(../images/check.svg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1px;
+        [type="checkbox"]:checked + span:before {
+            content: url(../images/check.svg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1px;
+        }
     }
 }
