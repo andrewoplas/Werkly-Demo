@@ -3,11 +3,17 @@ $page-header-menu-collapse-width: 780px;
 $header-height: 45px;
 
 .Header {
+    // position: relative;
+
     .logo-container {
         height: 180px;
         background-image: url("../images/header-top.png");
         background-size: cover;
         background-position: center;
+
+        &.spacing {
+            margin-bottom: $header-height;
+        }
 
         .logo-banner {
             width: 330px;
@@ -61,6 +67,12 @@ $header-height: 45px;
         padding-right: 20px;
         background-color: $primary-color;
         @include flex(flex-start, center);
+        z-index: 9999;
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+        }
 
         .nav {
             height: 100%;
@@ -223,6 +235,10 @@ $header-height: 45px;
         box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
         @include flex(space-between, center);
 
+        &.fixed {
+            margin-top: $header-height;
+        }
+
         .title {
             margin: 0;
             padding: 0;
@@ -348,7 +364,13 @@ $header-height: 45px;
         padding-left: 20px;
         padding-right: 20px;
         background-color: $primary-color;
+        z-index: 999;
         @include flex(space-between, center);
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+        }
 
         .title {
             margin: 0;

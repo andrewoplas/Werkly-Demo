@@ -4,6 +4,9 @@
   background-size: cover;
   background-position: center;
 }
+.Header .logo-container.spacing {
+  margin-bottom: 45px;
+}
 .Header .logo-container .logo-banner {
   width: 330px;
   height: 114px;
@@ -66,6 +69,11 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
+  z-index: 9999;
+}
+.Header .menu.fixed {
+  position: fixed;
+  top: 0;
 }
 .Header .menu .nav {
   height: 100%;
@@ -233,6 +241,9 @@
   justify-content: space-between;
   flex-direction: row;
 }
+.Header .page-header.fixed {
+  margin-top: 45px;
+}
 .Header .page-header .title {
   margin: 0;
   padding: 0;
@@ -354,10 +365,15 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: #0d2c54;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+}
+.Header .page-header-external.fixed {
+  position: fixed;
+  top: 0;
 }
 .Header .page-header-external .title {
   margin: 0;
@@ -375,7 +391,7 @@
 
 .MainContent {
   padding: 20px 20px 40px;
-  min-height: 70vh;
+  min-height: 300vh;
 }
 
 .Footer {
@@ -1646,6 +1662,34 @@ select.Select:disabled,
   color: #333333;
 }
 
+.Modal .modal-body {
+  padding: 0;
+}
+.Modal .modal-content {
+  border: 0;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  .Modal.medium .modal-dialog {
+    max-width: 70vw;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .Modal.medium .modal-dialog {
+    max-width: 90vw;
+  }
+}
+@media (min-width: 768px) {
+  .Modal.large .modal-dialog {
+    max-width: 85vw;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .Modal.large .modal-dialog {
+    max-width: 90vw;
+  }
+}
+
 * {
   font-family: "Nunito", sans-serif;
 }
@@ -1664,6 +1708,13 @@ p.label {
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: bold;
+}
+
+p.normal-text {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 [data-tippy-root] .tippy-box {

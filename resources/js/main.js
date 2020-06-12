@@ -1,17 +1,55 @@
 const initializeMobileNavMenu = (query) => {
-    new MetisMenu(query).on("shown.metisMenu", function (event) {
-        window.addEventListener("click", function mmClick1(e) {
-            if (!event.target.contains(e.target)) {
-                mm1.hide(event.detail.shownElement);
-                window.removeEventListener("click", mmClick1);
-            }
+    if ($(query).length) {
+        new MetisMenu(query).on("shown.metisMenu", function (event) {
+            window.addEventListener("click", function mmClick1(e) {
+                if (!event.target.contains(e.target)) {
+                    mm1.hide(event.detail.shownElement);
+                    window.removeEventListener("click", mmClick1);
+                }
+            });
         });
-    });
+    }
 };
 
 function initializePage() {
     initializeMobileNavMenu(".mobile-nav #menu");
     initializeMobileNavMenu(".page-header-mobile #page-header-menu");
+
+    $(window).scroll(function () {
+        const height = $(".Header .logo-container").outerHeight();
+        const pageHeader = $(".Header .page-header");
+        const pageHeaderInternal = $(".Header .menu");
+        const pageHeaderExternal = $(".Header .page-header-external");
+        const scroll = $(window).scrollTop();
+
+        if (scroll >= height) {
+            if (pageHeaderInternal.length) {
+                pageHeaderInternal.addClass("fixed");
+            }
+
+            if (pageHeaderExternal.length) {
+                pageHeaderExternal.prev().addClass("spacing");
+                pageHeaderExternal.addClass("fixed");
+            }
+
+            if (pageHeader.length) {
+                pageHeader.addClass("fixed");
+            }
+        } else {
+            if (pageHeaderInternal.length) {
+                pageHeaderInternal.removeClass("fixed");
+            }
+
+            if (pageHeaderExternal.length) {
+                pageHeaderExternal.prev().removeClass("spacing");
+                pageHeaderExternal.removeClass("fixed");
+            }
+
+            if (pageHeader.length) {
+                pageHeader.removeClass("fixed");
+            }
+        }
+    });
 }
 
 function outputUpdate(value, minValue, maxValue) {
