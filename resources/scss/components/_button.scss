@@ -12,6 +12,14 @@
     background-color: white;
     outline: 0 !important;
 
+    &.large {
+        height: 42px;
+    }
+
+    &.larger {
+        height: 50px;
+    }
+
     &.block {
         max-width: 100%;
     }
@@ -45,7 +53,7 @@
         border-radius: 8px;
 
         .left-icon {
-            margin-left: -10px;
+            margin-left: -5px;
             margin-right: 10px;
         }
 

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Werkly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./vendors/metis-menu/dist/metismenujs.min.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css" />
+    </head>
+
+    <body>
+        <div class="BaseInternal">
+            <!-- ===== HEADER ===== -->
+            <div class="Header">
+                <div class="logo-container">
+                    <div class="logo-banner">
+                        <img src="./resources/images/logo.png" alt="banner logo" />
+                    </div>
+                </div>
+
+                <div class="menu container-fluid">
+                    <ul class="nav nav-pages">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="javascript:void(0)">
+                                <img src="./resources/images/icon-green.svg" alt="icon" height="20" width="20" />
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                Operations Manual
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Forms
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <nav class="nav-item-dropdown">
+                                <ul class="main-list" id="people-dropdown">
+                                    <li>
+                                        <a class="has-arrow" href="javascript:void(0)">
+                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />People
+                                        </a>
+                                        <ul>
+                                            <li><a href="javascript:void(0)">People A</a></li>
+                                            <li><a href="javascript:void(0)">People B</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="nav-item">
+                            <nav class="nav-item-dropdown">
+                                <ul class="main-list" id="locations-dropdown">
+                                    <li>
+                                        <a class="has-arrow" href="javascript:void(0)">
+                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Locations
+                                        </a>
+                                        <ul>
+                                            <li><a href="javascript:void(0)">Location A</a></li>
+                                            <li><a href="javascript:void(0)">Location B</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Reporting
+                            </a>
+                        </li>
+                    </ul>
+
+                    <nav class="mobile-nav">
+                        <ul id="menu">
+                            <li>
+                                <a class="has-arrow" href="javascript:void(0)">
+                                    Menu
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <img src="./resources/images/icon-green.svg" alt="icon" height="20" width="20" />
+                                            Dashboard
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                            Operations Manual
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Forms
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="has-arrow" href="javascript:void(0)">
+                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />People
+                                        </a>
+                                        <ul>
+                                            <li><a href="javascript:void(0)">People A</a></li>
+                                            <li><a href="javascript:void(0)">People B</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="has-arrow" href="javascript:void(0)">
+                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Locations
+                                        </a>
+                                        <ul>
+                                            <li><a href="javascript:void(0)">Location A</a></li>
+                                            <li><a href="javascript:void(0)">Location B</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Reporting
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="divider"></div>
+
+                    <ul class="nav nav-icons">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                            </a>
+                        </li>
+                    </ul>
+
+                    <img src="./resources/images/logo-white.png" class="logo" alt="logo" />
+                </div>
+
+                <div class="page-header container-fluid">
+                    <h2 class="title">Welcome, Chris Jameson</h2>
+
+                    <div class="details">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search..." />
+                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />
+                        </div>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />
+                            </li>
+                            <li class="nav-item">
+                                <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />
+                            </li>
+                            <li class="nav-item">
+                                <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />
+                            </li>
+                        </ul>
+
+                        <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                    </div>
+
+                    <nav class="page-header-mobile">
+                        <ul id="page-header-menu">
+                            <li>
+                                <a class="has-arrow" href="javascript:void(0)">
+                                    Profile
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <img src="./resources/images/avatar.png" alt="avatar" height="20" width="20" />John Doe
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 3
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="MainContent container-fluid">
+                <div class="row">
+                    <!-- First Row -->
+                    <div class="col-12 mb-4">
+                        <div class="SetupWizard">
+                            <div class="box-header">
+                                <h4 class="box-title">Setup Wizard</h4>
+                                <button class="btn btn-hide">Hide <i class="fa fa-close"></i></button>
+                            </div>
+                            <hr />
+
+                            <div class="row">
+                                <div class="col-12 col-lg-6 col-xl-3 mb-2">
+                                    <div id="progress" class="mx-auto" style="width: 200px; height: 200px; position: relative;"></div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-3 mb-2">
+                                    <div class="checklist mb-4">
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span></span>
+                                                Setup branding
+                                            </label>
+                                        </div>
+                                        <span class="date-ago">1 hour ago</span>
+                                        <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
+                                    </div>
+                                    <div class="checklist mb-4">
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span></span>
+                                                Create a training document
+                                            </label>
+                                        </div>
+                                        <span class="date-ago">1 hour ago</span>
+                                        <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
+                                    </div>
+                                    <div class="checklist mb-4">
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span></span>
+                                                Add team members
+                                            </label>
+                                        </div>
+                                        <span class="date-ago">1 hour ago</span>
+                                        <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
+                                    </div>
+                                    <div class="checklist done mb-4">
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span></span>
+                                                Complete product tour
+                                            </label>
+                                        </div>
+                                        <span class="date-ago">1 hour ago</span>
+                                        <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
+                                    </div>
+                                    <div class="checklist done mb-4">
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span></span>
+                                                Setup branding
+                                            </label>
+                                        </div>
+                                        <span class="date-ago">1 hour ago</span>
+                                        <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-3 mb-2">
+                                    <button class="Button primary link larger block mb-2">
+                                        <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                        Training
+                                        <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                                    </button>
+                                    <button class="Button primary link larger block mb-2">
+                                        <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                        Training
+                                        <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                                    </button>
+                                    <button class="Button primary link larger block mb-2">
+                                        <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                        Training
+                                        <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                                    </button>
+                                    <button class="Button primary link larger block">
+                                        <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                        Training
+                                        <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                                    </button>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-3 mb-2">
+                                    <button class="Button primary link larger block mb-2">
+                                        <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                        Training
+                                        <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                                    </button>
+                                    <button class="Button primary link larger block mb-2">
+                                        <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                        Training
+                                        <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                                    </button>
+                                    <button class="Button primary link larger block mb-2">
+                                        <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                        Training
+                                        <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                                    </button>
+                                    <button class="Button primary link larger block">
+                                        <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                        Training
+                                        <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Second Row -->
+                    <div class="col-12 col-md-12 col-xl-6 mb-4">
+                        <div class="ContentBox">
+                            <div class="box-header">
+                                <h4 class="box-title">This is a header</h4>
+                                <div class="action-items no-flex-basis">
+                                    <button class="Button icon ellipsis">
+                                        <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                    </button>
+                                </div>
+                            </div>
+                            <hr />
+
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="Article">
+                                        <div class="image">
+                                            <div class="overlay">
+                                                <h4 class="title">This is an article title</h4>
+                                                <button class="Button secondary btn-open">Open</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mt-4 mt-md-0">
+                                    <div class="ComplaintCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">Customer complaints</h3>
+                                            <p class="description">
+                                                This is a content snippet This is a content snippet This is a content...
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="ComplaintCard mt-3">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">Customer complaints</h3>
+                                            <p class="description">
+                                                This is a content snippet This is a content snippet This is a content...
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="ComplaintCard mt-3">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">Customer complaints</h3>
+                                            <p class="description">
+                                                This is a content snippet This is a content snippet This is a content...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="ContentBox h-100">
+                            <div class="box-header">
+                                <h4 class="box-title">My Training</h4>
+                                <div class="action-items no-flex-basis">
+                                    <button class="Button icon secondary">
+                                        <img src="./resources/images/icon-white.svg" alt="icon" height="15" width="15" />
+                                    </button>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="ContentBox h-100">
+                            <div class="box-header">
+                                <h4 class="box-title">Quick Links</h4>
+                                <div class="action-items no-flex-basis">
+                                    <button class="Button icon secondary">
+                                        <img src="./resources/images/icon-white.svg" alt="icon" height="15" width="15" />
+                                    </button>
+                                </div>
+                            </div>
+                            <hr />
+                            <button class="Button secondary link large block mb-2">
+                                <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                Button Label
+                                <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                            </button>
+                            <button class="Button secondary link large block mb-2">
+                                <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                Button Label
+                                <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                            </button>
+                            <button class="Button secondary link large block mb-2">
+                                <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                Button Label
+                                <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                            </button>
+                            <button class="Button secondary link large block mb-2">
+                                <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                Button Label
+                                <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                            </button>
+                            <button class="Button secondary link large block mb-2">
+                                <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                Button Label
+                                <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                            </button>
+                            <button class="Button secondary link large block">
+                                <img src="./resources/images/icon-white.svg" class="left-icon" alt="icon" height="13" width="13" />
+                                Button Label
+                                <img src="./resources/images/icon-white.svg" class="arrow" alt="arrow" height="13" width="13" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Third Row -->
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="ContentBox h-100">
+                            <div class="box-header">
+                                <h4 class="box-title">My Tasks</h4>
+                                <div class="action-items no-flex-basis">
+                                    <button class="Button icon secondary">
+                                        <img src="./resources/images/icon-white.svg" alt="icon" height="15" width="15" />
+                                    </button>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="Task mb-2">
+                                <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="25" width="25" />
+                                <p class="description">How to make sushi</p>
+                                <span class="due-date">Due in 6 days</span>
+                            </div>
+                            <div class="Task mb-2">
+                                <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="25" width="25" />
+                                <p class="description">How to make sushi</p>
+                                <span class="due-date">Due in 6 days</span>
+                            </div>
+                            <div class="Task mb-2">
+                                <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="25" width="25" />
+                                <p class="description">How to make sushi</p>
+                                <span class="due-date">Due in 6 days</span>
+                            </div>
+                            <div class="Task mb-2">
+                                <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="25" width="25" />
+                                <p class="description">How to make sushi</p>
+                                <span class="due-date">Due in 6 days</span>
+                            </div>
+                            <div class="Task mb-2">
+                                <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="25" width="25" />
+                                <p class="description">How to make sushi</p>
+                                <span class="due-date">Due in 6 days</span>
+                            </div>
+                            <div class="Task">
+                                <img class="icon" src="./resources/images/icon-black.svg" alt="icon" height="25" width="25" />
+                                <p class="description">How to make sushi</p>
+                                <span class="due-date">Due in 6 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="ContentBox h-100">
+                            <div class="box-header">
+                                <h4 class="box-title">Pulse Survey</h4>
+                                <div class="action-items no-flex-basis">
+                                    <button class="Button icon secondary">
+                                        <img src="./resources/images/icon-white.svg" alt="icon" height="15" width="15" />
+                                    </button>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <img class="w-100" src="./resources/images/pulse-survey-graphic.png" alt="pulse survey" />
+                            <p class="normal-text mt-4">How do you like our new marketing campaign?</p>
+
+                            <div class="RadioButton mt-3 mb-2">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
+                                <label for="exampleRadios3">
+                                    This is an option
+                                </label>
+                            </div>
+
+                            <div class="RadioButton mb-2">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
+                                <label for="exampleRadios3">
+                                    This is an option
+                                </label>
+                            </div>
+
+                            <div class="RadioButton">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
+                                <label for="exampleRadios3">
+                                    This is an option
+                                </label>
+                            </div>
+
+                            <button class="Button secondary mt-3 ml-auto d-block">Submit</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="ContentBox h-100">
+                            <div class="box-header">
+                                <h4 class="box-title">My Performance Reviews</h4>
+                                <div class="action-items no-flex-basis">
+                                    <button class="Button icon secondary">
+                                        <img src="./resources/images/icon-white.svg" alt="icon" height="15" width="15" />
+                                    </button>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="ContentBox h-100">
+                            <div class="box-header">
+                                <h4 class="box-title">My Training</h4>
+                                <div class="action-items no-flex-basis">
+                                    <button class="Button icon secondary">
+                                        <img src="./resources/images/icon-white.svg" alt="icon" height="15" width="15" />
+                                    </button>
+                                </div>
+                            </div>
+                            <hr />
+
+                            <div class="ActivityLog">
+                                <div class="icon">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                </div>
+                                <div class="details">
+                                    <p class="title">How to make sushi</p>
+                                    <p class="description">Training Activity Completed</p>
+                                </div>
+                                <span class="date-ago">8 mths ago</span>
+                            </div>
+                            <div class="ActivityLog">
+                                <div class="icon">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                </div>
+                                <div class="details">
+                                    <p class="title">How to make sushi</p>
+                                    <p class="description">Training Activity Completed</p>
+                                </div>
+                                <span class="date-ago">8 mths ago</span>
+                            </div>
+                            <div class="ActivityLog">
+                                <div class="icon">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                </div>
+                                <div class="details">
+                                    <p class="title">How to make sushi</p>
+                                    <p class="description">Training Activity Completed</p>
+                                </div>
+                                <span class="date-ago">8 mths ago</span>
+                            </div>
+                            <div class="ActivityLog">
+                                <div class="icon">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                </div>
+                                <div class="details">
+                                    <p class="title">How to make sushi</p>
+                                    <p class="description">Training Activity Completed</p>
+                                </div>
+                                <span class="date-ago">8 mths ago</span>
+                            </div>
+                            <div class="ActivityLog">
+                                <div class="icon">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                </div>
+                                <div class="details">
+                                    <p class="title">How to make sushi</p>
+                                    <p class="description">Training Activity Completed</p>
+                                </div>
+                                <span class="date-ago">8 mths ago</span>
+                            </div>
+                            <div class="ActivityLog">
+                                <div class="icon">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                </div>
+                                <div class="details">
+                                    <p class="title">How to make sushi</p>
+                                    <p class="description">Training Activity Completed</p>
+                                </div>
+                                <span class="date-ago">8 mths ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== FOOTER ===== -->
+            <div class="Footer">
+                <p class="text">© Werkly. All rights reserved 2020.</p>
+            </div>
+        </div>
+
+        <!-- Vendor JS -->
+        <script src="https://kit.fontawesome.com/8c9c5e8e6e.js" crossorigin="anonymous"></script>
+        <script src="./vendors/jquery/jquery.min.js"></script>
+        <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./vendors/metis-menu/dist/metismenujs.min.js"></script>
+        <script src="./vendors/progress.js/progressbar.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./resources/js/main.js"></script>
+
+        <script>
+            if (initializeDashboard) {
+                initializePage();
+                initializeDashboard();
+            }
+        </script>
+    </body>
+</html>

@@ -78,10 +78,10 @@
 .Header .menu .nav {
   height: 100%;
 }
-.Header .menu .nav.nav-pages li {
+.Header .menu .nav.nav-pages > li {
   height: 100%;
 }
-.Header .menu .nav.nav-pages li a {
+.Header .menu .nav.nav-pages > li a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -92,7 +92,7 @@
   font-weight: bold;
   color: white;
 }
-.Header .menu .nav.nav-pages li a.active {
+.Header .menu .nav.nav-pages > li a.active {
   margin-top: -10px;
   height: 55px;
   color: #333333;
@@ -105,10 +105,10 @@
   justify-content: flex-end;
   flex-direction: row;
 }
-.Header .menu .nav.nav-pages li a.active img {
+.Header .menu .nav.nav-pages > li a.active img {
   color: #7fb800;
 }
-.Header .menu .nav.nav-pages li a img {
+.Header .menu .nav.nav-pages > li a img {
   color: white;
   width: 20px;
   height: 20px;
@@ -119,10 +119,54 @@
     display: none;
   }
 }
-.Header .menu .nav.nav-icons li {
+.Header .menu .nav.nav-pages .nav-item-dropdown {
+  background: #0d2c54;
   height: 100%;
 }
-.Header .menu .nav.nav-icons li a {
+.Header .menu .nav.nav-pages .nav-item-dropdown ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: #0d2c54;
+  z-index: 1;
+}
+.Header .menu .nav.nav-pages .nav-item-dropdown ul.main-list {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+}
+.Header .menu .nav.nav-pages .nav-item-dropdown ul.main-list > li {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.Header .menu .nav.nav-pages .nav-item-dropdown ul.main-list a {
+  position: relative;
+  display: block;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+.Header .menu .nav.nav-pages .nav-item-dropdown ul.main-list a.has-arrow {
+  padding-right: 40px;
+  height: 45px;
+  text-decoration: none;
+}
+.Header .menu .nav.nav-pages .nav-item-dropdown ul.main-list a img {
+  color: white;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.Header .menu .nav.nav-icons > li {
+  height: 100%;
+}
+.Header .menu .nav.nav-icons > li a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -131,7 +175,7 @@
   padding: 15px 18px;
 }
 @media (max-width: 767.98px) {
-  .Header .menu .nav.nav-icons li a {
+  .Header .menu .nav.nav-icons > li a {
     padding: 15px 10px;
   }
 }
@@ -391,7 +435,7 @@
 
 .MainContent {
   padding: 20px 20px 40px;
-  min-height: 300vh;
+  min-height: 70vh;
 }
 
 .Footer {
@@ -441,7 +485,7 @@
   flex-direction: row;
 }
 @media (max-width: 767.98px) {
-  .ContentBox .box-header .action-items {
+  .ContentBox .box-header .action-items:not(.no-flex-basis) {
     flex-basis: 100%;
   }
 }
@@ -517,6 +561,12 @@
   background-color: white;
   outline: 0 !important;
 }
+.Button.large {
+  height: 42px;
+}
+.Button.larger {
+  height: 50px;
+}
 .Button.block {
   max-width: 100%;
 }
@@ -549,7 +599,7 @@
   border-radius: 8px;
 }
 .Button.link .left-icon {
-  margin-left: -10px;
+  margin-left: -5px;
   margin-right: 10px;
 }
 .Button.link .arrow {
@@ -1756,6 +1806,145 @@ select.Select:disabled,
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   color: #333333;
+}
+
+.Task {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.Task .icon {
+  flex-shrink: 0;
+}
+.Task .description {
+  margin: 0 10px 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+.Task .due-date {
+  margin-left: auto;
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.ActivityLog {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.ActivityLog .icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: #7fb800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.ActivityLog .details {
+  margin: 0 10px 0 20px;
+}
+.ActivityLog .details .title {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.ActivityLog .details .description {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+}
+.ActivityLog .date-ago {
+  margin-left: auto;
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #cccccc;
+}
+
+.SetupWizard {
+  min-height: 170px;
+  padding: 10px 20px 20px 20px;
+  background-color: white;
+  border-radius: 8px;
+  border: 3px dashed #b7b7b7;
+}
+.SetupWizard .box-header {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.SetupWizard .box-header .box-title {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0d2c54;
+}
+.SetupWizard .box-header .btn-hide {
+  font-weight: bold;
+}
+.SetupWizard .box-header .btn-hide i {
+  margin-left: 8px;
+}
+.SetupWizard hr {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-color: #cccccc;
+}
+.SetupWizard .checklist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.SetupWizard .checklist.done .date-ago {
+  display: block;
+}
+.SetupWizard .checklist.done .Checkbox label {
+  text-decoration: line-through;
+}
+.SetupWizard .checklist.done .icon {
+  display: none;
+}
+.SetupWizard .checklist .Checkbox {
+  flex: 1;
+}
+.SetupWizard .checklist .Checkbox label {
+  width: 100%;
+  max-width: 100%;
+}
+.SetupWizard .checklist .date-ago {
+  display: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+}
+.SetupWizard .progressbar-text .value {
+  margin: 0;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+.SetupWizard .progressbar-text .complete {
+  margin: 0;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 * {

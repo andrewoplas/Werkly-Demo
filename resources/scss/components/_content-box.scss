@@ -23,7 +23,9 @@
             @include flex(flex-start, center);
 
             @include media-breakpoint-down(sm) {
-                flex-basis: 100%;
+                &:not(.no-flex-basis) {
+                    flex-basis: 100%;
+                }
             }
 
             @include media-breakpoint-down(sm) {

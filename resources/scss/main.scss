@@ -33,6 +33,9 @@
 @import "./components/modal";
 @import "./components/article";
 @import "./components/complaint-card";
+@import "./components/task";
+@import "./components/activity-log";
+@import "./components/setup-wizard";
 
 * {
     font-family: $primary-font;

@@ -1,19 +1,21 @@
 const initializeMobileNavMenu = (query) => {
     if ($(query).length) {
-        new MetisMenu(query).on("shown.metisMenu", function (event) {
-            window.addEventListener("click", function mmClick1(e) {
-                if (!event.target.contains(e.target)) {
-                    mm1.hide(event.detail.shownElement);
-                    window.removeEventListener("click", mmClick1);
-                }
-            });
-        });
+        new MetisMenu(query);
     }
 };
 
 function initializePage() {
     initializeMobileNavMenu(".mobile-nav #menu");
     initializeMobileNavMenu(".page-header-mobile #page-header-menu");
+
+    $(".nav-item-dropdown").each(function () {
+        const mainList = $(this).find(".main-list");
+
+        if (mainList.length) {
+            const id = mainList.attr("id");
+            initializeMobileNavMenu(".nav-item-dropdown #" + id);
+        }
+    });
 
     $(window).scroll(function () {
         const height = $(".Header .logo-container").outerHeight();
@@ -204,4 +206,36 @@ function initializePageBuilder() {
         const row = cloneableRow.clone();
         row.insertBefore($(this));
     });
+}
+
+function initializeDashboard() {
+    $(".btn-hide").click(function () {
+        $(".SetupWizard").hide(300);
+    });
+
+    const width = 13;
+    const bar = new ProgressBar.Circle("#progress", {
+        color: "#0D2C54",
+        strokeWidth: width,
+        trailWidth: width,
+        trailColor: "rgba(13,44,84, 0.5)",
+        easing: "easeInOut",
+        duration: 1400,
+        from: { color: "#0D2C54", width },
+        to: { color: "#0D2C54", width },
+        // Set default step function for all animate calls
+        step: function (state, circle) {
+            circle.path.setAttribute("stroke", state.color);
+            circle.path.setAttribute("stroke-width", state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText("");
+            } else {
+                circle.setText("<p class='value'>" + value + "%</p>" + "<p class='complete-text'>COMPLETE</p>");
+            }
+        },
+    });
+
+    bar.animate(0.75);
 }
