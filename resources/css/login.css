@@ -1690,6 +1690,74 @@ select.Select:disabled,
   }
 }
 
+.Article {
+  min-height: 285px;
+  height: 100%;
+}
+.Article .image {
+  min-height: 285px;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/article-graphic.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.Article .image .overlay {
+  width: 250px;
+  padding: 20px 20px;
+  background-color: rgba(51, 51, 51, 0.65);
+  border-radius: 4px;
+  text-align: center;
+}
+.Article .image .overlay .title {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: white !important;
+}
+.Article .image .overlay .btn-open {
+  margin-top: 9px;
+}
+
+.ComplaintCard {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: row;
+}
+.ComplaintCard .image {
+  width: 80px;
+  min-height: 80px;
+  margin-right: 20px;
+  align-self: stretch;
+  background-image: url("../images/complaint-graphic.png");
+  background-size: cover;
+  background-position: center;
+}
+.ComplaintCard .details {
+  flex: 1;
+}
+.ComplaintCard .details .title {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+}
+.ComplaintCard .details .description {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
 * {
   font-family: "Nunito", sans-serif;
 }
