@@ -1597,6 +1597,55 @@ select.Select:disabled,
   margin-top: 10px;
 }
 
+.DocumentHover .image {
+  min-height: 185px;
+  width: 185px;
+  background-image: url("../images/login-left-graphic.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.DocumentHover .image:hover .action-items {
+  visibility: visible;
+}
+.DocumentHover .image .action-items {
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #333333;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.DocumentHover .image .action-items.space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.DocumentHover .image .action-items.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.DocumentHover .title {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #333333;
+}
+
 * {
   font-family: "Nunito", sans-serif;
 }
