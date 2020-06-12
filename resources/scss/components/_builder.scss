@@ -1,0 +1,30 @@
+.Builder {
+    @include flex(stretch, stretch);
+
+    .content-container {
+        flex: 1;
+        min-height: 170px;
+        border-radius: 8px;
+        border: 1px dashed $gray-3;
+        height: 100%;
+        @include flex(center, center, column);
+
+        .icon {
+            margin-bottom: 30px;
+        }
+    }
+
+    .action-items {
+        @include flex(flex-start, flex-start, column);
+        margin-left: 20px;
+        flex-shrink: 0;
+
+        & > button:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    .btn-new-row {
+        margin-left: -45px;
+    }
+}

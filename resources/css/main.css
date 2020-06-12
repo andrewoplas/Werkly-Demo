@@ -122,6 +122,11 @@
   height: 100%;
   padding: 15px 18px;
 }
+@media (max-width: 767.98px) {
+  .Header .menu .nav.nav-icons li a {
+    padding: 15px 10px;
+  }
+}
 .Header .menu .mobile-nav {
   background: #0d2c54;
   width: 200px;
@@ -135,7 +140,12 @@
 }
 @media only screen and (max-width: 500px) {
   .Header .menu .mobile-nav {
-    width: 100px;
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .Header .menu .mobile-nav {
+    width: 130px;
   }
 }
 .Header .menu .mobile-nav ul {
@@ -146,7 +156,10 @@
   z-index: 1;
 }
 .Header .menu .mobile-nav ul#menu {
+  height: 100%;
   display: flex;
+  align-items: stretch;
+  justify-content: stretch;
   flex-direction: column;
 }
 .Header .menu .mobile-nav ul#menu > li {
@@ -164,11 +177,34 @@
   color: white;
   transition: all 0.3s ease-out;
 }
+.Header .menu .mobile-nav ul#menu a.has-arrow {
+  height: 45px;
+}
 .Header .menu .mobile-nav ul#menu a img {
   color: white;
   width: 20px;
   height: 20px;
   margin-right: 10px;
+}
+@media only screen and (max-width: 500px) {
+  .Header .menu .mobile-nav ul#menu a img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Header .menu .mobile-nav ul#menu a {
+    font-size: 12px;
+    padding: 12px 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .Header .menu .mobile-nav ul#menu a {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
 }
 .Header .menu .divider {
   height: 25px;
@@ -740,6 +776,11 @@ select.Select:disabled,
   align-items: center;
   justify-content: center;
   flex-direction: row;
+}
+.Tooltip.no-style {
+  background-color: transparent !important;
+  display: block;
+  border-radius: 0;
 }
 
 /* The switch - the box around the slider */
@@ -1466,6 +1507,94 @@ select.Select:disabled,
 }
 .dd-dragel .dd-item > ol .name {
   font-weight: 400 !important;
+}
+
+.Builder {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: row;
+}
+.Builder .content-container {
+  flex: 1;
+  min-height: 170px;
+  border-radius: 8px;
+  border: 1px dashed #cccccc;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Builder .content-container .icon {
+  margin-bottom: 30px;
+}
+.Builder .action-items {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+.Builder .action-items > button:not(:last-child) {
+  margin-bottom: 5px;
+}
+.Builder .btn-new-row {
+  margin-left: -45px;
+}
+
+.DocumentCard {
+  border: 1px solid #cccccc;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: row;
+}
+.DocumentCard .image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  min-height: 185px;
+  background-image: url("../images/login-left-graphic.png");
+  background-size: cover;
+  background-position: center;
+}
+.DocumentCard .details {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.DocumentCard .details .title {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+}
+.DocumentCard .details .description {
+  margin: 10px 0 20px 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+}
+.DocumentCard .details .action-items {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.DocumentCard .details .action-items > * {
+  margin-top: 10px;
 }
 
 * {

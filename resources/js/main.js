@@ -139,3 +139,31 @@ function initializeLayout1() {
         });
     });
 }
+
+function initializePageBuilder() {
+    $(document).ready(function () {
+        tippy(".Tooltip", { maxWidth: 160 });
+    });
+
+    $(document).on("click", ".btn-delete", function () {
+        const container = $(this).parents(".ContentBox");
+
+        if (container.find(".Builder").length == 1) {
+            alert("There should be one builder that must remain.");
+        } else {
+            $(this).parents(".Builder").remove();
+        }
+    });
+
+    $(document).on("click", ".btn-new-row", function () {
+        const cloneableRow = $(".cloneable-row").first();
+        const row = cloneableRow.clone();
+        row.insertBefore($(this));
+    });
+
+    $(".btn-new-block").click(function () {
+        const cloneableRow = $(".cloneable-block").first();
+        const row = cloneableRow.clone();
+        row.insertBefore($(this));
+    });
+}

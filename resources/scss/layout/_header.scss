@@ -1,5 +1,6 @@
 $menu-collapse-width: 1250px;
 $page-header-menu-collapse-width: 780px;
+$header-height: 45px;
 
 .Header {
     .logo-container {
@@ -55,7 +56,7 @@ $page-header-menu-collapse-width: 780px;
     }
 
     .menu {
-        height: 45px;
+        height: $header-height;
         padding-left: 20px;
         padding-right: 20px;
         background-color: $primary-color;
@@ -113,6 +114,10 @@ $page-header-menu-collapse-width: 780px;
                         @include flex(flex-start, center);
                         height: 100%;
                         padding: 15px 18px;
+
+                        @include media-breakpoint-down(sm) {
+                            padding: 15px 10px;
+                        }
                     }
                 }
             }
@@ -129,7 +134,11 @@ $page-header-menu-collapse-width: 780px;
             }
 
             @include breakpoint-down(500px) {
-                width: 100px;
+                width: 150px;
+            }
+
+            @include breakpoint-down(400px) {
+                width: 130px;
             }
 
             ul {
@@ -140,8 +149,8 @@ $page-header-menu-collapse-width: 780px;
                 z-index: 1;
 
                 &#menu {
-                    display: flex;
-                    flex-direction: column;
+                    height: 100%;
+                    @include flex(stretch, stretch, column);
 
                     & > li {
                         flex: 1 1 0%;
@@ -159,11 +168,29 @@ $page-header-menu-collapse-width: 780px;
                         color: white;
                         transition: all 0.3s ease-out;
 
+                        &.has-arrow {
+                            height: $header-height;
+                        }
+
                         img {
                             color: white;
                             width: 20px;
                             height: 20px;
                             margin-right: 10px;
+
+                            @include breakpoint-down(500px) {
+                                display: none;
+                            }
+                        }
+
+                        @include breakpoint-down(500px) {
+                            font-size: 12px;
+                            padding: 12px 10px;
+                        }
+
+                        @include breakpoint-down(400px) {
+                            font-size: 10px;
+                            @include flex(flex-start, center);
                         }
                     }
                 }
@@ -189,7 +216,7 @@ $page-header-menu-collapse-width: 780px;
     }
 
     .page-header {
-        height: 45px;
+        height: $header-height;
         padding-left: 20px;
         padding-right: 20px;
         background-color: white;
@@ -317,7 +344,7 @@ $page-header-menu-collapse-width: 780px;
     }
 
     .page-header-external {
-        height: 45px;
+        height: $header-height;
         padding-left: 20px;
         padding-right: 20px;
         background-color: $primary-color;

@@ -12,8 +12,6 @@
         <!-- Vendor CSS -->
         <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="./vendors/metis-menu/dist/metismenujs.min.css" />
-        <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
-        <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css" />
@@ -176,109 +174,151 @@
             <!-- ===== MAIN CONTENT ===== -->
             <div class="MainContent container-fluid">
                 <div class="row">
-                    <div class="col-12 col-sm-4">
+                    <div class="col-12">
                         <div class="ContentBox mb-4">
                             <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
+                                <h4 class="box-title">Documents</h4>
                             </div>
                             <hr />
-                            <div class="ButtonCluster">
-                                <button class="item block">
-                                    Button Label
-                                    <img src="./resources/images/icon-black.svg" class="arrow" alt="arrow" height="13" width="13" />
-                                </button>
-                                <button class="item block">
-                                    Button Label
-                                    <img src="./resources/images/icon-black.svg" class="arrow" alt="arrow" height="13" width="13" />
-                                </button>
-                                <button class="item block selected">
-                                    Button Label
-                                    <img src="./resources/images/icon-black.svg" class="arrow" alt="arrow" height="13" width="13" />
-                                </button>
 
-                                <button class="item block">
-                                    Button Label
-                                    <img src="./resources/images/icon-black.svg" class="arrow" alt="arrow" height="13" width="13" />
-                                </button>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <button class="Button">Back</button>
-                                <button class="Button secondary">Publish</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-8">
-                        <div class="ContentBox">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                            </div>
-                            <hr />
                             <div class="row">
-                                <div class="col-12 col-sm-3 d-flex justify-content-between align-items-start mb-3">
-                                    <p class="label">Field Label</p>
-                                    <div
-                                        class="Tooltip mt-1"
-                                        data-tippy-content="This is the placeholder for an extremely important tooltip"
-                                        data-tippy-placement="top-start"
-                                        data-tippy-offset="[-20,10]"
-                                    >
-                                        <img src="./resources/images/icon-white.svg" alt="icon" height="18" width="18" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-9">
-                                    <input class="Input" placeholder="Placeholder text goes here" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="content" class="text-center">
-                            <div class="ContentBox mt-4 pt-4 cloneable-block">
-                                <div class="Builder cloneable-row mb-3">
-                                    <div class="content-container">
-                                        <img class="icon" src="./resources/images/icon-gray.svg" alt="icon" height="50" width="50" />
-                                        <div class="ButtonGroup btn-group">
-                                            <button class="Button secondary dropdown-toggle" data-toggle="dropdown">Add Content</button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Button Label</a>
-                                                <a class="dropdown-item" href="#">Button Label</a>
-                                                <a class="dropdown-item" href="#">Button Label</a>
-                                                <a class="dropdown-item" href="#">Button Label</a>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                    <div class="DocumentCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">
+                                                Title goes here in this place
+                                            </h3>
+                                            <p class="description">This is where the description goes.</p>
+                                            <div class="action-items">
+                                                <button class="Button icon">
+                                                    <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                                </button>
+                                                <button class="Button secondary px-3">Open</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="action-items">
-                                        <button class="Button icon btn-arrow-up">
-                                            <div class="Tooltip no-style" data-tippy-content="Arrow Up" data-tippy-placement="left">
-                                                <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                    <div class="DocumentCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">
+                                                Title goes here in this place
+                                            </h3>
+                                            <p class="description">This is where the description goes.</p>
+                                            <div class="action-items">
+                                                <button class="Button icon">
+                                                    <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                                </button>
+                                                <button class="Button secondary px-3">Open</button>
                                             </div>
-                                        </button>
-                                        <button class="Button icon btn-arrow-down">
-                                            <div class="Tooltip no-style" data-tippy-content="Arrow Down" data-tippy-placement="left">
-                                                <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
-                                            </div>
-                                        </button>
-                                        <button class="Button icon btn-grid">
-                                            <div class="Tooltip no-style" data-tippy-content="Grid" data-tippy-placement="left">
-                                                <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
-                                            </div>
-                                        </button>
-                                        <button class="Button icon btn-copy">
-                                            <div class="Tooltip no-style" data-tippy-content="Copy" data-tippy-placement="left">
-                                                <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
-                                            </div>
-                                        </button>
-                                        <button class="Button icon btn-delete">
-                                            <div class="Tooltip no-style" data-tippy-content="Delete" data-tippy-placement="left">
-                                                <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
-                                            </div>
-                                        </button>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <button class="Button secondary btn-new-row">New Row</button>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                    <div class="DocumentCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">
+                                                Title goes here in this place
+                                            </h3>
+                                            <p class="description">This is where the description goes.</p>
+                                            <div class="action-items">
+                                                <button class="Button icon">
+                                                    <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                                </button>
+                                                <button class="Button secondary px-3">Open</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                    <div class="DocumentCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">
+                                                Title goes here in this place
+                                            </h3>
+                                            <p class="description">This is where the description goes.</p>
+                                            <div class="action-items">
+                                                <button class="Button icon">
+                                                    <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                                </button>
+                                                <button class="Button secondary px-3">Open</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                    <div class="DocumentCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">
+                                                Title goes here in this place
+                                            </h3>
+                                            <p class="description">This is where the description goes.</p>
+                                            <div class="action-items">
+                                                <button class="Button icon">
+                                                    <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                                </button>
+                                                <button class="Button secondary px-3">Open</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                    <div class="DocumentCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">
+                                                Title goes here in this place
+                                            </h3>
+                                            <p class="description">This is where the description goes.</p>
+                                            <div class="action-items">
+                                                <button class="Button icon">
+                                                    <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                                </button>
+                                                <button class="Button secondary px-3">Open</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                    <div class="DocumentCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">
+                                                Title goes here in this place
+                                            </h3>
+                                            <p class="description">This is where the description goes.</p>
+                                            <div class="action-items">
+                                                <button class="Button icon">
+                                                    <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                                </button>
+                                                <button class="Button secondary px-3">Open</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                    <div class="DocumentCard">
+                                        <div class="image"></div>
+                                        <div class="details">
+                                            <h3 class="title">
+                                                Title goes here in this place
+                                            </h3>
+                                            <p class="description">This is where the description goes.</p>
+                                            <div class="action-items">
+                                                <button class="Button icon">
+                                                    <img src="./resources/images/icon-black.svg" alt="icon" height="13" width="13" />
+                                                </button>
+                                                <button class="Button secondary px-3">Open</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="Button secondary mt-3 mb-5 btn-new-block">New Block</button>
                         </div>
                     </div>
                 </div>
@@ -291,27 +331,17 @@
         </div>
 
         <!-- Vendor JS -->
-        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 
         <script src="./vendors/jquery/jquery.min.js"></script>
         <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <script src="./vendors/metis-menu/dist/metismenujs.min.js"></script>
 
-        <script src="./vendors/semantic-ui/transition.min.js"></script>
-        <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
-
-        <script src="./vendors/ckeditor/ckeditor.js"></script>
-
         <!-- Custom JS -->
         <script src="./resources/js/main.js"></script>
 
         <script>
-            if (initializePageBuilder) {
-                initializePage();
-                initializePageBuilder();
-            }
+            initializePage();
         </script>
     </body>
 </html>

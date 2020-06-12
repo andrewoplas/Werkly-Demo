@@ -3,4 +3,10 @@
     background-color: $dark;
     border-radius: 50%;
     @include flex(center, center);
+
+    &.no-style {
+        background-color: transparent !important;
+        display: block;
+        border-radius: 0;
+    }
 }
