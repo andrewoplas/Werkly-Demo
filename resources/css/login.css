@@ -1478,7 +1478,7 @@ select.Select:disabled,
   font-size: 18px;
 }
 .Accordion .item-container .fa-angle-right {
-  margin-left: 10px;
+  margin-left: 0;
   font-size: 18px;
 }
 .Accordion .dd-item {
@@ -1571,7 +1571,7 @@ select.Select:disabled,
   font-size: 18px;
 }
 .dd-dragel .item-container .fa-angle-right {
-  margin-left: 10px;
+  margin-left: 0;
   font-size: 18px;
 }
 .dd-dragel .dd-item {

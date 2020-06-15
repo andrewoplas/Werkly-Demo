@@ -133,7 +133,7 @@
                                         <div class="dd-handle">
                                             <p class="name">Button Label</p>
                                             <div class="item-container">
-                                                <img class="mr-2" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
+                                                <img class="mr-3" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
                                                 <i class="far fa-angle-right"></i>
                                             </div>
                                         </div>
@@ -150,7 +150,7 @@
                                         <div class="dd-handle">
                                             <p class="name">Button Label</p>
                                             <div class="item-container">
-                                                <img class="mr-2" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
+                                                <img class="mr-3" src="./resources/images/icon-black.svg" alt="icon" height="18" width="18" />
                                                 <i class="far fa-angle-right"></i>
                                             </div>
                                         </div>
@@ -200,8 +200,6 @@
                     const items = container.find(".dd-item");
                     items.each(function () {
                         const arrowIcon = $(this).find("> .dd-handle .item-container .fa-angle-right", this);
-                        console.log(arrowIcon);
-                        console.log($(this).find("> .dd-list", this).length);
                         if ($(this).find("> .dd-list", this).length) {
                             arrowIcon.hide();
                         } else {
