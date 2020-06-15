@@ -1,6 +1,13 @@
-const initializeMobileNavMenu = (query) => {
-    if ($(query).length) {
-        new MetisMenu(query);
+const initializeMobileNavMenu = (element) => {
+    if ($(element).length) {
+        const mm = new MetisMenu(element).on("shown.metisMenu", function (event) {
+            window.addEventListener("click", function mmClick(e) {
+                if (!event.target.contains(e.target)) {
+                    mm.hide(event.detail.shownElement);
+                    window.removeEventListener("click", mmClick);
+                }
+            });
+        });
     }
 };
 
@@ -273,4 +280,8 @@ function initializeDashboard() {
     });
 
     bar.animate(0.75);
+}
+
+function initializeNews() {
+    $(".carousel").carousel();
 }

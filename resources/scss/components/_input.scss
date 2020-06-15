@@ -2,7 +2,7 @@ input.Input,
 textarea.Input {
     width: 100%;
     border-radius: 4px;
-    padding: 5px 20px;
+    padding: 5px 10px;
     border: 1px solid $gray-3;
     $outline: 0 !important;
     font-family: $secondary-font;
@@ -29,5 +29,4 @@ textarea.Input {
 
 textarea.Input {
     min-height: 70px;
-    padding-top: 10px;
 }

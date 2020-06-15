@@ -1,10 +1,10 @@
 .RadioButton {
     label {
+        @include flex(stretch, center);
         font-family: $primary-font;
         font-size: 14px;
         font-weight: normal;
         margin-left: 10px;
-        display: flex;
         margin: 0;
     }
 
@@ -18,8 +18,8 @@
         content: "";
         /* create custom radiobutton appearance */
         display: inline-block;
-        width: 23px;
-        height: 23px;
+        width: 18px;
+        height: 18px;
         padding: 3px;
         margin-right: 10px;
         /* background-color only for content */

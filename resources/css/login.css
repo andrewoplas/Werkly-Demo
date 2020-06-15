@@ -495,17 +495,6 @@
   flex-direction: row;
 }
 @media (max-width: 767.98px) {
-  .ContentBox .box-header .action-items:not(.no-flex-basis) {
-    flex-basis: 100%;
-  }
-}
-@media (max-width: 767.98px) {
-  .ContentBox .box-header .action-items .ellipsis {
-    display: none;
-    margin-top: 10px;
-  }
-}
-@media (max-width: 767.98px) {
   .ContentBox .box-header .action-items .main-button {
     display: block;
     width: 100%;
@@ -554,7 +543,8 @@
 .ContentBox hr {
   margin-top: 15px;
   margin-bottom: 20px;
-  border-color: #cccccc;
+  border: 0;
+  border-top: 1px solid #cccccc;
 }
 
 .Button {
@@ -707,7 +697,7 @@ input.Input,
 textarea.Input {
   width: 100%;
   border-radius: 4px;
-  padding: 5px 20px;
+  padding: 5px 10px;
   border: 1px solid #cccccc;
   font-family: "Quicksand", sans-serif;
   font-weight: normal;
@@ -733,7 +723,6 @@ textarea.Input:disabled {
 
 textarea.Input {
   min-height: 70px;
-  padding-top: 10px;
 }
 
 select.Select,
@@ -741,8 +730,8 @@ select.Select,
   width: 100%;
   min-height: 30px !important;
   border-radius: 4px;
-  padding: 8px 20px !important;
-  border: 1px solid #cccccc;
+  padding: 8px 10px !important;
+  border: 1px solid #cccccc !important;
   font-family: "Quicksand", sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -765,14 +754,15 @@ select.Select .menu,
 .fluid.Select .menu {
   border-color: #333333 !important;
 }
-select.Select .menu .item,
-.fluid.Select .menu .item {
+select.Select .menu > .item,
+.fluid.Select .menu > .item {
   font-family: "Quicksand", sans-serif !important;
   font-size: 14px !important;
   color: #333333 !important;
+  padding: 8px 10px !important;
 }
-select.Select .menu .item:hover,
-.fluid.Select .menu .item:hover {
+select.Select .menu > .item:hover,
+.fluid.Select .menu > .item:hover {
   background-color: #333333;
   color: white !important;
 }
@@ -796,8 +786,8 @@ select.Select:disabled,
   width: 100%;
   min-height: 30px !important;
   border-radius: 4px;
-  padding: 8px 20px !important;
-  border: 1px solid #cccccc;
+  padding: 8px 10px !important;
+  border: 1px solid #cccccc !important;
   font-family: "Quicksand", sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -817,12 +807,13 @@ select.Select:disabled,
 .fluid.SelectMultiple .menu {
   border-color: #333333 !important;
 }
-.fluid.SelectMultiple .menu .item {
+.fluid.SelectMultiple .menu > .item {
   font-family: "Quicksand", sans-serif !important;
   font-size: 14px !important;
   color: #333333 !important;
+  padding: 8px 10px !important;
 }
-.fluid.SelectMultiple .menu .item:hover {
+.fluid.SelectMultiple .menu > .item:hover {
   background-color: #333333;
   color: white !important;
 }
@@ -1010,11 +1001,14 @@ select.Select:disabled,
   /* optional styles for centering radiobuttons */
 }
 .RadioButton label {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: row;
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: normal;
   margin-left: 10px;
-  display: flex;
   margin: 0;
 }
 .RadioButton input[type=radio] {
@@ -1024,8 +1018,8 @@ select.Select:disabled,
   content: "";
   /* create custom radiobutton appearance */
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: 18px;
+  height: 18px;
   padding: 3px;
   margin-right: 10px;
   /* background-color only for content */
@@ -1053,13 +1047,21 @@ select.Select:disabled,
   font-weight: normal;
   margin-bottom: 0;
 }
+.Checkbox label::selection {
+  color: none;
+  background: none;
+}
+.Checkbox label::-moz-selection {
+  color: none;
+  background: none;
+}
 .Checkbox label input {
   display: none;
 }
 .Checkbox label span {
   margin-right: 10px;
-  height: 22px;
-  width: 22px;
+  height: 18px;
+  width: 18px;
   border: 1px solid #333333;
   display: inline-block;
   position: relative;
@@ -1070,6 +1072,7 @@ select.Select:disabled,
   justify-content: center;
   align-items: center;
   margin-top: 1px;
+  height: 100%;
 }
 
 .ActionRequired {
@@ -1979,6 +1982,22 @@ select.Select:disabled,
   font-size: 11px;
   font-weight: normal;
 }
+.SetupWizard .checklist .date-ago::selection {
+  color: none;
+  background: none;
+}
+.SetupWizard .checklist .date-ago::-moz-selection {
+  color: none;
+  background: none;
+}
+.SetupWizard .checklist img::selection {
+  color: none;
+  background: none;
+}
+.SetupWizard .checklist img::-moz-selection {
+  color: none;
+  background: none;
+}
 .SetupWizard .progressbar-text .value {
   margin: 0;
   text-align: center;
@@ -1996,6 +2015,7 @@ select.Select:disabled,
 
 .WYSIWYG + .cke {
   border-radius: 4px;
+  border: 1px solid #cccccc;
 }
 .WYSIWYG + .cke .cke_inner {
   border-radius: 4px;
@@ -2017,6 +2037,7 @@ body {
   background-color: #eeeeee;
   min-height: 100vh;
   min-width: 100vw;
+  overflow-x: hidden;
 }
 body.white {
   background-color: white;

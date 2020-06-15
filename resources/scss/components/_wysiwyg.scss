@@ -1,6 +1,7 @@
 .WYSIWYG {
     & + .cke {
         border-radius: 4px;
+        border: 1px solid $gray-3;
 
         .cke_inner {
             border-radius: 4px;
