@@ -433,13 +433,12 @@
 }
 .Header .metismenu .has-arrow:after {
   transform: rotate(-135deg) translateY(-50%);
-  transform-origin: top;
-  top: 50%;
-  transition: all 0.3s ease-out;
+  top: 45%;
 }
 .Header .metismenu .has-arrow[aria-expanded=true]:after,
 .Header .metismenu .mm-active > .has-arrow:after {
   transform: rotate(45deg) translateY(-50%);
+  top: 55%;
 }
 
 .MainContent {
