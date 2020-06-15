@@ -1,7 +1,10 @@
 .DocumentHover {
+    flex-basis: 12%;
+    flex-shrink: 0;
+
     .image {
         min-height: 185px;
-        width: 185px;
+        min-width: 185px;
         background-image: url("../images/login-left-graphic.png");
         background-size: cover;
         background-position: center;

@@ -36,6 +36,7 @@
 @import "./components/task";
 @import "./components/activity-log";
 @import "./components/setup-wizard";
+@import "./components/wysiwyg";
 
 * {
     font-family: $primary-font;
@@ -43,11 +44,16 @@
 
 body {
     background-color: $gray-1;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
 
     &.white {
         background-color: white;
+    }
+
+    & > div:first-child {
+        position: relative;
+        min-height: 100vh;
     }
 }
 
@@ -62,12 +68,12 @@ p.normal-text {
     margin: 0;
     font-family: $primary-font;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 [data-tippy-root] {
     .tippy-box {
-        border-radius: 8px;
+        border-radius: 4px;
 
         .tippy-content {
             font-size: 11px;

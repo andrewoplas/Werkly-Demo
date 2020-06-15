@@ -52,6 +52,15 @@ function initializePage() {
             }
         }
     });
+
+    const activeIconSrc = "./resources/images/icon-green.svg";
+    const inactiveIconSrc = "./resources/images/icon-white.svg";
+    $(".menu .nav-pages .nav-link").click(function () {
+        $(".menu .nav-pages .nav-link").removeClass("active");
+        $(".menu .nav-pages .nav-link img").attr("src", inactiveIconSrc);
+        const active = $(this).addClass("active");
+        active.find("img").attr("src", activeIconSrc);
+    });
 }
 
 function outputUpdate(value, minValue, maxValue) {
@@ -81,6 +90,11 @@ function initializeButtonsInputs() {
 
         // Force change to position output value
         outputUpdate(0, 0, 20);
+
+        $(".ButtonCluster .item").click(function () {
+            $(this).parents(".ButtonCluster").find(".item").removeClass("selected");
+            $(this).addClass("selected");
+        });
     });
 }
 
@@ -177,40 +191,61 @@ function initializeLayout1() {
             const isChecked = $(this).is(":checked");
             $("#switch-value").text(isChecked ? "On" : "Off");
         });
+
+        $(".ButtonCluster .item").click(function () {
+            $(this).parents(".ButtonCluster").find(".item").removeClass("selected");
+            $(this).addClass("selected");
+        });
     });
 }
 
 function initializePageBuilder() {
     $(document).ready(function () {
         tippy(".Tooltip", { maxWidth: 160 });
-    });
 
-    $(document).on("click", ".btn-delete", function () {
-        const container = $(this).parents(".ContentBox");
+        $(".ButtonCluster .item").click(function () {
+            $(this).parents(".ButtonCluster").find(".item").removeClass("selected");
+            $(this).addClass("selected");
+        });
 
-        if (container.find(".Builder").length == 1) {
-            alert("There should be one builder that must remain.");
-        } else {
-            $(this).parents(".Builder").remove();
-        }
-    });
+        $(document).on("click", ".btn-delete", function () {
+            const container = $(this).parents(".ContentBox");
 
-    $(document).on("click", ".btn-new-row", function () {
-        const cloneableRow = $(".cloneable-row").first();
-        const row = cloneableRow.clone();
-        row.insertBefore($(this));
-    });
+            if (container.find(".Builder").length == 1) {
+                alert("There should be one builder that must remain.");
+            } else {
+                $(this).parents(".Builder").remove();
+            }
+        });
 
-    $(".btn-new-block").click(function () {
-        const cloneableRow = $(".cloneable-block").first();
-        const row = cloneableRow.clone();
-        row.insertBefore($(this));
+        $(document).on("click", ".btn-new-row", function () {
+            const cloneableRow = $(".cloneable-row").first();
+            const row = cloneableRow.clone();
+            row.insertBefore($(this));
+            tippy(".Tooltip", { maxWidth: 160 });
+        });
+
+        $(".btn-new-block").click(function () {
+            const cloneableRow = $(".cloneable-block").first();
+            const row = cloneableRow.clone();
+            row.insertBefore($(this));
+            tippy(".Tooltip", { maxWidth: 160 });
+        });
     });
 }
 
 function initializeDashboard() {
     $(".btn-hide").click(function () {
         $(".SetupWizard").hide(300);
+    });
+
+    $(".SetupWizard .checklist input").change(function () {
+        const isChecked = $(this).is(":checked");
+        if (isChecked) {
+            $(this).parents(".checklist").addClass("done");
+        } else {
+            $(this).parents(".checklist").removeClass("done");
+        }
     });
 
     const width = 13;

@@ -96,6 +96,7 @@
 
     .comment-input {
         background-color: $secondary-color-light;
+        pointer-events: none;
 
         &::placeholder {
             font-family: $primary-font;

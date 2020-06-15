@@ -30,10 +30,10 @@
 @mixin item-container {
     .item-container {
         position: absolute;
-        height: 100%;
+        height: 45px;
         top: 0;
         right: 27px;
-        z-index: 999;
+        z-index: 100;
         @include flex(flex-start, center);
 
         .action-button {
@@ -54,10 +54,12 @@
 
         [data-action="expand"] {
             display: none;
+            z-index: 200;
         }
 
         [data-action="collapse"] {
             display: block;
+            z-index: 200;
         }
 
         &.dd-collapsed {
@@ -90,7 +92,7 @@
             float: none;
             font-size: 18px;
             text-indent: 0;
-            z-index: 999;
+            z-index: 199;
         }
 
         & > ol {
@@ -99,7 +101,13 @@
             }
 
             .name {
-                font-weight: 400 !important;
+                font-weight: normal !important;
+            }
+        }
+
+        &:has(.dd-list) {
+            .fa-angle-right {
+                display: none !important;
             }
         }
     }

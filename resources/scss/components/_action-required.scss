@@ -3,7 +3,7 @@
     min-height: 70px;
     padding: 20px;
     background-color: $secondary-color;
-    border-radius: 8px;
+    border-radius: 4px;
 
     @include flex(flex-start, center);
 
@@ -38,12 +38,18 @@
         color: $secondary-color;
         font-family: $secondary-font;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 700;
         outline: 0;
+        transition: 150ms;
 
         @include media-breakpoint-down(xs) {
             margin-top: 20px;
             width: 100%;
+        }
+
+        &:hover {
+            background: #f7f7f7;
+            transition: 150ms;
         }
     }
 }

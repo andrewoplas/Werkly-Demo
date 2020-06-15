@@ -86,17 +86,16 @@ $header-height: 45px;
                         height: 100%;
                         padding: 15px 20px;
                         font-size: 14px;
-                        font-weight: bold;
                         color: white;
 
                         &.active {
                             margin-top: -10px;
                             height: 55px;
                             color: $dark;
+                            font-weight: bold;
                             background-color: white;
                             border-top-left-radius: 8px;
                             border-top-right-radius: 8px;
-                            border-bottom: 1px solid $gray-1;
                             @include flex(flex-end, flex-end);
 
                             img {
@@ -432,5 +431,17 @@ $header-height: 45px;
                 font-size: 14px;
             }
         }
+    }
+
+    .metismenu .has-arrow:after {
+        transform: rotate(-135deg) translateY(-50%);
+        transform-origin: top;
+        top: 50%;
+        transition: all 0.3s ease-out;
+    }
+
+    .metismenu .has-arrow[aria-expanded="true"]:after,
+    .metismenu .mm-active > .has-arrow:after {
+        transform: rotate(45deg) translateY(-50%);
     }
 }

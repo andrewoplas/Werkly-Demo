@@ -193,12 +193,23 @@
                 scrollSensitivity: 1000,
                 callback: function (list, element) {
                     const item = $(element);
+                    const container = item.parents(".dd");
                     const handle = item.find("dd-handle");
                     const parentsLength = item.parents(".dd-list").length;
 
-                    if (parentsLength == 2) {
-                    } else {
-                    }
+                    const items = container.find(".dd-item");
+                    items.each(function () {
+                        const arrowIcon = $(this).find("> .dd-handle .item-container .fa-angle-right", this);
+                        console.log(arrowIcon);
+                        console.log($(this).find("> .dd-list", this).length);
+                        if ($(this).find("> .dd-list", this).length) {
+                            arrowIcon.hide();
+                        } else {
+                            arrowIcon.show();
+                        }
+                    });
+
+                    container.find("> .dd-list > .dd-item > .dd-handle .item-container .fa-angle-right", this).hide();
                 },
                 click: function () {
                     alert("test");
