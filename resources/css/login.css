@@ -2054,7 +2054,7 @@ p.normal-text {
   position: relative;
 }
 .Login > .row {
-  height: 100%;
+  height: 100vh;
 }
 .Login .graphic {
   background-image: url("../images/login-left-graphic.png");
