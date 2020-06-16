@@ -11,7 +11,6 @@
 
         <!-- Vendor CSS -->
         <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="./vendors/metis-menu/dist/metismenujs.min.css" />
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css" />
@@ -30,106 +29,94 @@
                 <div class="menu container-fluid">
                     <ul class="nav nav-pages">
                         <li class="nav-item">
-                            <a class="nav-link active" href="javascript:void(0)">
-                                <img src="./resources/images/icon-green.svg" alt="icon" height="20" width="20" />Dashboard
+                            <a class="nav-link active" href="javascript:void(0)" title="Dashboard">
+                                <img src="./resources/images/icon-green.svg" alt="icon" height="20" width="20" />
+                                <span>Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Operations Manual
+                            <a class="nav-link" href="javascript:void(0)" title="Operations Manual">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                <span>Operations Manual</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Forms
+                            <a class="nav-link" href="javascript:void(0)" title="Forms">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                <span>Forms</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <nav class="nav-item-dropdown">
-                                <ul class="main-list" id="people-dropdown">
-                                    <li>
-                                        <a class="has-arrow" href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />People
-                                        </a>
-                                        <ul>
-                                            <li><a href="javascript:void(0)">People A</a></li>
-                                            <li><a href="javascript:void(0)">People B</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
+                            <div class="dropdown nav-item-dropdown">
+                                <a id="dropdownMenuButton" class="has-arrow" data-toggle="dropdown">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />People
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">People A</a>
+                                    <a class="dropdown-item" href="#">People B</a>
+                                    <a class="dropdown-item" href="#">People C</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <nav class="nav-item-dropdown">
-                                <ul class="main-list" id="locations-dropdown">
-                                    <li>
-                                        <a class="has-arrow" href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Locations
-                                        </a>
-                                        <ul>
-                                            <li><a href="javascript:void(0)">Location A</a></li>
-                                            <li><a href="javascript:void(0)">Location B</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
+                            <div class="dropdown nav-item-dropdown">
+                                <a id="dropdownMenuButton" class="has-arrow" data-toggle="dropdown">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Location
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Location A</a>
+                                    <a class="dropdown-item" href="#">Location B</a>
+                                    <a class="dropdown-item" href="#">Location C</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Reporting
+                            <a class="nav-link" href="javascript:void(0)" title="Reporting">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                <span>Reporting</span>
                             </a>
                         </li>
                     </ul>
 
-                    <nav class="mobile-nav">
-                        <ul id="menu">
-                            <li>
-                                <a class="has-arrow" href="javascript:void(0)">
-                                    Menu
+                    <div class="dropdown mobile-nav">
+                        <a id="mobile-nav" class="has-arrow" data-toggle="dropdown">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="mobile-nav">
+                            <a class="dropdown-item active" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Dashboard
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Operations Manual
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Forms
+                            </a>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />People
                                 </a>
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-green.svg" alt="icon" height="20" width="20" />Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Operations Manual
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Forms
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="has-arrow" href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />People
-                                        </a>
-                                        <ul>
-                                            <li><a href="javascript:void(0)">People A</a></li>
-                                            <li><a href="javascript:void(0)">People B</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="has-arrow" href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Locations
-                                        </a>
-                                        <ul>
-                                            <li><a href="javascript:void(0)">Location A</a></li>
-                                            <li><a href="javascript:void(0)">Location B</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Reporting
-                                        </a>
-                                    </li>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">People A</a></li>
+                                    <li><a class="dropdown-item" href="#">People B</a></li>
+                                    <li><a class="dropdown-item" href="#">People C</a></li>
                                 </ul>
                             </li>
-                        </ul>
-                    </nav>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">
+                                    <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Locations
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Locations A</a></li>
+                                    <li><a class="dropdown-item" href="#">Locations B</a></li>
+                                    <li><a class="dropdown-item" href="#">Locations C</a></li>
+                                </ul>
+                            </li>
+                            <a class="dropdown-item" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Reporting
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="divider"></div>
 
@@ -174,46 +161,33 @@
                             </li>
                         </ul>
 
-                        <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
-                    </div>
-
-                    <nav class="page-header-mobile">
-                        <ul id="page-header-menu">
-                            <li>
-                                <a class="has-arrow" href="javascript:void(0)">
-                                    Profile
+                        <div class="dropdown dropdown-avatar">
+                            <a id="dropdownMenuButton" data-toggle="dropdown">
+                                <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item show-on-mobile" href="#">
+                                    <img class="mr-2" src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 1
                                 </a>
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/avatar.png" alt="avatar" height="20" width="20" />John Doe
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 3
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
+                                <a class="dropdown-item show-on-mobile" href="#">
+                                    <img class="mr-2" src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 2
+                                </a>
+                                <a class="dropdown-item show-on-mobile" href="#">
+                                    <img class="mr-2" src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 3
+                                </a>
+                                <div class="dropdown-divider show-on-mobile"></div>
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Account</a>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- ===== MAIN CONTENT ===== -->
             <div class="MainContent container-fluid">
-                <div class="row">
+                <div class="row mb-30">
                     <div class="col-12 col-md-6 col-xl-3">
                         <div class="ContentBox">
                             <div class="box-header">
@@ -266,7 +240,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-4">
+                <div class="row mb-30">
                     <div class="col-12 col-lg-9 col-xl-6">
                         <div class="ContentBox">
                             <div class="box-header">
@@ -352,7 +326,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-4">
+                <div class="row mb-30">
                     <div class="col-12 col-xl-9">
                         <div class="ContentBox">
                             <div class="box-header">
@@ -438,7 +412,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-4">
+                <div class="row">
                     <div class="col-12">
                         <div class="ContentBox">
                             <div class="box-header">
@@ -563,7 +537,6 @@
         <!-- Vendor JS -->
         <script src="./vendors/jquery/jquery.min.js"></script>
         <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="./vendors/metis-menu/dist/metismenujs.min.js"></script>
 
         <!-- Custom JS -->
         <script src="./resources/js/main.js"></script>

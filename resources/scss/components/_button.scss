@@ -7,8 +7,7 @@
 
 .Button {
     max-width: 250px;
-    height: 30px;
-    padding: 0 24px;
+    padding: 5px 24px;
     font-family: $secondary-font;
     font-size: 14px;
     font-weight: normal;
@@ -19,6 +18,8 @@
     background-color: white;
     outline: 0 !important;
     transition: 150ms;
+    display: inline-block;
+    cursor: pointer;
 
     @include buttonHover(#f7f7f7);
 
@@ -37,7 +38,7 @@
     &.primary {
         background-color: $primary-color;
         border: 0 !important;
-        color: white;
+        color: white !important;
 
         @include buttonHover(#153e73);
     }
@@ -45,15 +46,13 @@
     &.secondary {
         background-color: $secondary-color;
         border: 0 !important;
-        color: white;
+        color: white !important;
 
         @include buttonHover(#87c401);
     }
 
     &.icon {
-        padding: 0;
-        width: 30px;
-        height: 30px;
+        padding: 5px 10px;
     }
 
     &.link {

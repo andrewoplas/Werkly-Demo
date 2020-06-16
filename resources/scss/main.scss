@@ -45,8 +45,9 @@
 body {
     background-color: $gray-1;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     overflow-x: hidden;
+    position: relative;
 
     &.white {
         background-color: white;
@@ -80,4 +81,8 @@ p.normal-text {
             font-size: 11px;
         }
     }
+}
+
+.mb-30 {
+    margin-bottom: 30px;
 }

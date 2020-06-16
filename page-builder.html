@@ -11,7 +11,7 @@
 
         <!-- Vendor CSS -->
         <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="./vendors/metis-menu/dist/metismenujs.min.css" />
+
         <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
         <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
 
@@ -32,78 +32,68 @@
                 <div class="menu container-fluid">
                     <ul class="nav nav-pages">
                         <li class="nav-item">
-                            <a class="nav-link active" href="javascript:void(0)">
-                                <img src="./resources/images/icon-green.svg" alt="icon" height="20" width="20" />Dashboard
+                            <a class="nav-link active" href="javascript:void(0)" title="Dashboard">
+                                <img src="./resources/images/icon-green.svg" alt="icon" height="20" width="20" />
+                                <span>Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Operations Manual
+                            <a class="nav-link" href="javascript:void(0)" title="Operations Manual">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                <span>Operations Manual</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Training
+                            <a class="nav-link" href="javascript:void(0)" title="Training">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                <span>Training</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Performance
+                            <a class="nav-link" href="javascript:void(0)" title="Performance">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                <span>Performance</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Communications
+                            <a class="nav-link" href="javascript:void(0)" title="Communications">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                <span>Communications</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Forums
+                            <a class="nav-link" href="javascript:void(0)" title="Forums">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />
+                                <span>Forums</span>
                             </a>
                         </li>
                     </ul>
 
-                    <nav class="mobile-nav">
-                        <ul id="menu">
-                            <li>
-                                <a class="has-arrow" href="javascript:void(0)">
-                                    Menu
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-green.svg" alt="icon" height="20" width="20" />Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Operations Manual
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Training
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Performance
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Communications
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Forums
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="dropdown mobile-nav">
+                        <a id="mobile-nav" class="has-arrow" data-toggle="dropdown">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="mobile-nav">
+                            <a class="dropdown-item active" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Dashboard
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Operations Manual
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Training
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Performance
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Communications
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./resources/images/icon-white.svg" alt="icon" height="20" width="20" />Reporting
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="divider"></div>
 
@@ -148,40 +138,27 @@
                             </li>
                         </ul>
 
-                        <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
-                    </div>
-
-                    <nav class="page-header-mobile">
-                        <ul id="page-header-menu">
-                            <li>
-                                <a class="has-arrow" href="javascript:void(0)">
-                                    Profile
+                        <div class="dropdown dropdown-avatar">
+                            <a id="dropdownMenuButton" data-toggle="dropdown">
+                                <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item show-on-mobile" href="#">
+                                    <img class="mr-2" src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 1
                                 </a>
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/avatar.png" alt="avatar" height="20" width="20" />John Doe
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <img src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 3
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
+                                <a class="dropdown-item show-on-mobile" href="#">
+                                    <img class="mr-2" src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 2
+                                </a>
+                                <a class="dropdown-item show-on-mobile" href="#">
+                                    <img class="mr-2" src="./resources/images/icon-black.svg" alt="icon" height="20" width="20" />Icon 3
+                                </a>
+                                <div class="dropdown-divider show-on-mobile"></div>
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Account</a>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -308,8 +285,6 @@
 
         <script src="./vendors/jquery/jquery.min.js"></script>
         <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-        <script src="./vendors/metis-menu/dist/metismenujs.min.js"></script>
 
         <script src="./vendors/semantic-ui/transition.min.js"></script>
         <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
