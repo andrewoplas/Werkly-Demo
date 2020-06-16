@@ -28,6 +28,7 @@
             border: 1px solid $dark;
             display: inline-block;
             position: relative;
+            flex-shrink: 0;
         }
 
         [type="checkbox"]:checked + span:before {

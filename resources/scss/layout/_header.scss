@@ -222,6 +222,13 @@ $header-height: 45px;
                     background-color: $secondary-color !important;
                 }
 
+                .dropdown-item:not(.active) {
+                    &:focus,
+                    &:hover {
+                        background-color: #153e73 !important;
+                    }
+                }
+
                 a {
                     position: relative;
                     display: block;
@@ -273,11 +280,6 @@ $header-height: 45px;
                     left: 100%;
                     margin-left: 0.1rem;
                     margin-right: 0.1rem;
-                }
-
-                .dropdown-item:focus,
-                .dropdown-item:hover {
-                    background-color: $primary-color !important;
                 }
 
                 .dropdown-toggle::after {
@@ -349,7 +351,8 @@ $header-height: 45px;
 
                 input {
                     width: 100%;
-                    padding: 5px 22px;
+                    padding: 5px 15px;
+                    padding-right: 45px;
                     font-family: $secondary-font;
                     font-weight: normal;
                     font-size: 14px;
