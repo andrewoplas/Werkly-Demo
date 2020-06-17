@@ -152,9 +152,11 @@
   display: block;
   padding: 12px 15px;
   font-size: 14px;
-  font-weight: bold;
   color: white;
   transition: all 0.3s ease-out;
+}
+.Header .menu .nav.nav-pages .nav-item-dropdown .dropdown-menu a:not(.active):focus, .Header .menu .nav.nav-pages .nav-item-dropdown .dropdown-menu a:not(.active):hover {
+  background-color: #153e73 !important;
 }
 .Header .menu .nav.nav-icons > li {
   height: 100%;
@@ -389,8 +391,14 @@
   margin-left: 20px;
   cursor: pointer;
 }
+.Header .page-header .details .dropdown-avatar .dropdown-menu {
+  border: 0;
+  border-radius: 0;
+  margin-top: 12px;
+}
 .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item {
   font-size: 14px;
+  padding: 12px 15px;
 }
 .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item:active {
   background-color: #0d2c54;

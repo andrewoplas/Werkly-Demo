@@ -155,9 +155,15 @@ $header-height: 45px;
                             display: block;
                             padding: 12px 15px;
                             font-size: 14px;
-                            font-weight: bold;
                             color: white;
                             transition: all 0.3s ease-out;
+
+                            &:not(.active) {
+                                &:focus,
+                                &:hover {
+                                    background-color: #153e73 !important;
+                                }
+                            }
                         }
                     }
                 }
@@ -400,11 +406,18 @@ $header-height: 45px;
                     cursor: pointer;
                 }
 
-                .dropdown-menu .dropdown-item {
-                    font-size: 14px;
+                .dropdown-menu {
+                    border: 0;
+                    border-radius: 0;
+                    margin-top: 12px;
 
-                    &:active {
-                        background-color: $primary-color;
+                    .dropdown-item {
+                        font-size: 14px;
+                        padding: 12px 15px;
+
+                        &:active {
+                            background-color: $primary-color;
+                        }
                     }
                 }
             }
