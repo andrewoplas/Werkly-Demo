@@ -11,10 +11,27 @@
         .box-title {
             margin: 0;
             margin-top: 10px;
+            margin-right: 10px;
             font-family: $primary-font;
             font-size: 15px;
             font-weight: bold;
             text-transform: uppercase;
+            flex: 1;
+
+            @include media-breakpoint-down(sm) {
+                &.full-width-on-mobile {
+                    width: 100%;
+
+                    &.full-width-on-mobile + .action-items {
+                        width: 100%;
+
+                        .main-button {
+                            padding-left: 8px;
+                            padding-right: 8px;
+                        }
+                    }
+                }
+            }
         }
 
         .action-items {
@@ -28,31 +45,28 @@
             //     }
             // }
 
+            @include media-breakpoint-down(sm) {
+                justify-content: space-between;
+            }
+
             // @include media-breakpoint-down(sm) {
-            //     .ellipsis {
-            //         display: none;
+            //     .main-button {
+            //         display: block;
+            //         width: 100%;
             //         margin-top: 10px;
+            //         margin-bottom: 10px;
+            //         max-width: 100%;
             //     }
             // }
-
-            @include media-breakpoint-down(sm) {
-                .main-button {
-                    display: block;
-                    width: 100%;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-                    max-width: 100%;
-                }
-            }
 
             .tabs {
                 margin-right: 13px;
                 border: 0;
 
-                @include media-breakpoint-down(sm) {
-                    width: 100%;
-                    @include element-center;
-                }
+                // @include media-breakpoint-down(sm) {
+                //     width: 100%;
+                //     @include element-center;
+                // }
 
                 li {
                     a {
@@ -74,10 +88,6 @@
                             position: absolute;
                             bottom: -14px;
                             left: 0;
-
-                            @include media-breakpoint-down(md) {
-                                display: none;
-                            }
                         }
                     }
                 }
