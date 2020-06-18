@@ -1,12 +1,15 @@
 .Tooltip {
-    padding: 2px;
-    background-color: $dark;
-    border-radius: 50%;
-    @include flex(center, center);
+    &:not(.no-style) {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        background-color: $dark;
+        border-radius: 50%;
+        @include flex(center, center);
 
-    &.no-style {
-        background-color: transparent !important;
-        display: block;
-        border-radius: 0;
+        .icon {
+            color: white;
+            font-size: 13px;
+        }
     }
 }

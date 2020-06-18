@@ -53,6 +53,8 @@
 
     &.icon {
         padding: 5px 10px;
+        min-width: 33px;
+        min-height: 33px;
     }
 
     &.link {
@@ -64,10 +66,12 @@
         border-radius: 4px;
 
         .left-icon {
-            margin-right: 10px;
+            margin-left: -2px;
+            margin-right: 8px;
         }
 
         .arrow {
+            font-size: 17px;
             margin-left: auto;
         }
     }

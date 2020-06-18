@@ -6,11 +6,13 @@
         min-height: 170px;
         border-radius: 8px;
         border: 1px dashed $gray-3;
-        height: 100%;
+
         @include flex(center, center, column);
 
-        .icon {
+        .main-icon {
             margin-bottom: 30px;
+            color: $gray-4;
+            font-size: 50px;
         }
     }
 

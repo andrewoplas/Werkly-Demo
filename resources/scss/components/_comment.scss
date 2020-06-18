@@ -17,7 +17,6 @@
 
     .comment-input {
         width: auto;
-        height: 100%;
         margin-right: 10px;
         flex: 1;
     }
@@ -58,8 +57,9 @@
                 text-overflow: ellipsis;
                 line-height: 1;
 
-                img {
+                .icon {
                     margin-right: 5px;
+                    font-size: 10px;
                 }
 
                 span {

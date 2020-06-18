@@ -99,7 +99,8 @@
   justify-content: flex-start;
   flex-direction: row;
   height: 100%;
-  padding: 15px 20px;
+  padding: 15px 25px;
+  color: white;
 }
 .Header .menu .nav.nav-pages > li a span {
   font-size: 14px;
@@ -122,19 +123,18 @@
   font-weight: bold;
   position: absolute;
   color: #333333;
-  left: 38px;
+  left: 40px;
   margin-top: 1px;
 }
-.Header .menu .nav.nav-pages > li a.active img {
+.Header .menu .nav.nav-pages > li a.active .icon {
   color: #7fb800;
   margin-left: -7px;
-  margin-right: 17px;
+  margin-right: 15px;
+  color: #7fb800;
 }
-.Header .menu .nav.nav-pages > li a img {
+.Header .menu .nav.nav-pages > li a .icon {
   color: white;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 @media only screen and (max-width: 1250px) {
   .Header .menu .nav.nav-pages {
@@ -180,6 +180,7 @@
   flex-direction: row;
   height: 100%;
   padding: 15px 18px;
+  color: white;
 }
 @media (max-width: 767.98px) {
   .Header .menu .nav.nav-icons > li a {
@@ -234,6 +235,7 @@
 }
 .Header .menu .mobile-nav .dropdown-menu .dropdown-item.active {
   background-color: #7fb800 !important;
+  font-weight: bold;
 }
 .Header .menu .mobile-nav .dropdown-menu .dropdown-item:not(.active):focus, .Header .menu .mobile-nav .dropdown-menu .dropdown-item:not(.active):hover {
   background-color: #153e73 !important;
@@ -243,23 +245,17 @@
   display: block;
   padding: 12px 15px;
   font-size: 14px;
-  font-weight: bold;
   color: white;
   transition: all 0.3s ease-out;
 }
 .Header .menu .mobile-nav .dropdown-menu a.has-arrow {
   height: 45px;
 }
-.Header .menu .mobile-nav .dropdown-menu a img {
+.Header .menu .mobile-nav .dropdown-menu a .icon {
   color: white;
-  width: 20px;
-  height: 20px;
   margin-right: 10px;
-}
-@media only screen and (max-width: 500px) {
-  .Header .menu .mobile-nav .dropdown-menu a img {
-    display: none;
-  }
+  font-size: 14px;
+  min-width: 18px;
 }
 @media only screen and (max-width: 500px) {
   .Header .menu .mobile-nav .dropdown-menu a {
@@ -376,9 +372,9 @@
   font-size: 11px;
   color: #b7b7b7;
 }
-.Header .page-header .details .search-input img {
+.Header .page-header .details .search-input .icon {
   position: absolute;
-  top: 6px;
+  top: 8px;
   right: 15px;
 }
 .Header .page-header .details .nav li {
@@ -412,8 +408,29 @@
   font-size: 14px;
   padding: 12px 15px;
 }
+.Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item .show-on-mobile {
+  display: none;
+}
+@media only screen and (max-width: 780px) {
+  .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item .show-on-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: row;
+  }
+}
+@media (max-width: 767.98px) {
+  .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item {
+    font-size: 12px;
+  }
+}
 .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item:active {
   background-color: #0d2c54;
+}
+.Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item .icon {
+  margin-right: 10px;
+  font-size: 14px;
+  min-width: 18px;
 }
 .Header .page-header-external {
   height: 45px;
@@ -442,6 +459,10 @@
   .Header .page-header-external .title {
     font-size: 14px;
   }
+}
+.Header .page-header-external .icon {
+  color: white;
+  font-size: 19px;
 }
 .Header .dropdown .has-arrow::after {
   position: absolute;
@@ -546,6 +567,7 @@
     flex-basis: 100%;
     margin-top: 10px;
     margin-bottom: 20px;
+    max-width: 100%;
   }
 }
 .ContentBox .box-header .action-items .tabs {
@@ -633,6 +655,8 @@
 }
 .Button.icon {
   padding: 5px 10px;
+  min-width: 33px;
+  min-height: 33px;
 }
 .Button.link {
   display: flex;
@@ -646,9 +670,11 @@
   border-radius: 4px;
 }
 .Button.link .left-icon {
-  margin-right: 10px;
+  margin-left: -2px;
+  margin-right: 8px;
 }
 .Button.link .arrow {
+  font-size: 17px;
   margin-left: auto;
 }
 .Button.dropdown-toggle {
@@ -886,8 +912,10 @@ select.Select:disabled,
   content: "x";
 }
 
-.Tooltip {
-  padding: 2px;
+.Tooltip:not(.no-style) {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
   background-color: #333333;
   border-radius: 50%;
   display: flex;
@@ -895,10 +923,9 @@ select.Select:disabled,
   justify-content: center;
   flex-direction: row;
 }
-.Tooltip.no-style {
-  background-color: transparent !important;
-  display: block;
-  border-radius: 0;
+.Tooltip:not(.no-style) .icon {
+  color: white;
+  font-size: 13px;
 }
 
 /* The switch - the box around the slider */
@@ -1129,6 +1156,8 @@ select.Select:disabled,
   }
 }
 .ActionRequired .icon {
+  color: white;
+  font-size: 18px;
   margin-right: 20px;
 }
 @media (max-width: 575.98px) {
@@ -1189,7 +1218,6 @@ select.Select:disabled,
 }
 .Comment .comment-input {
   width: auto;
-  height: 100%;
   margin-right: 10px;
   flex: 1;
 }
@@ -1236,8 +1264,9 @@ select.Select:disabled,
   text-overflow: ellipsis;
   line-height: 1;
 }
-.Comment .comment-details .attachments .item img {
+.Comment .comment-details .attachments .item .icon {
   margin-right: 5px;
+  font-size: 10px;
 }
 .Comment .comment-details .attachments .item span {
   font-family: "Quicksand", sans-serif;
@@ -1444,12 +1473,23 @@ select.Select:disabled,
   font-weight: normal;
   border-radius: 0;
 }
+.Datatable .dataTables_filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
 .Datatable .dataTables_filter input {
   border-radius: 8px;
   font-size: 11px;
   font-weight: 300;
   padding: 6px 11px;
   width: 180px;
+  height: 100%;
+}
+.Datatable .dataTables_filter label {
+  margin: 0;
+  align-self: stretch;
 }
 
 .ProgressBar {
@@ -1671,14 +1711,15 @@ select.Select:disabled,
   min-height: 170px;
   border-radius: 8px;
   border: 1px dashed #cccccc;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.Builder .content-container .icon {
+.Builder .content-container .main-icon {
   margin-bottom: 30px;
+  color: #b7b7b7;
+  font-size: 50px;
 }
 .Builder .action-items {
   display: flex;
@@ -1943,6 +1984,7 @@ select.Select:disabled,
   height: 32px;
   flex-shrink: 0;
   background-color: #7fb800;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2040,13 +2082,8 @@ select.Select:disabled,
   color: none;
   background: none;
 }
-.SetupWizard .checklist img::selection {
-  color: none;
-  background: none;
-}
-.SetupWizard .checklist img::-moz-selection {
-  color: none;
-  background: none;
+.SetupWizard .checklist .icon {
+  font-size: 17px;
 }
 .SetupWizard .progressbar-text .value {
   margin: 0;

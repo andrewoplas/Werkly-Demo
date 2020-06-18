@@ -51,13 +51,9 @@ function initializePage() {
         }
     });
 
-    const activeIconSrc = "./resources/images/icon-green.svg";
-    const inactiveIconSrc = "./resources/images/icon-white.svg";
     $(".menu .nav-pages .nav-link").click(function () {
         $(".menu .nav-pages .nav-link").removeClass("active");
-        $(".menu .nav-pages .nav-link img").attr("src", inactiveIconSrc);
         const active = $(this).addClass("active");
-        active.find("img").attr("src", activeIconSrc);
     });
 }
 
@@ -132,11 +128,7 @@ function initializeDataTables() {
             const input = wrapper.find(".dataTables_filter input").unbind();
             const self = this.api();
 
-            const $searchButton = $(
-                '<button class="Button secondary icon ml-2">' +
-                    '<img src="./resources/images/icon-white.svg" alt="icon" height="13" width="13" />' +
-                    "</button>"
-            ).click(function () {
+            const $searchButton = $('<button class="Button secondary icon ml-2">' + '<i class="fas fa-search"></i>' + "</button>").click(function () {
                 self.search(input.val()).draw();
             });
 
@@ -219,6 +211,7 @@ function initializePageBuilder() {
         $(document).on("click", ".btn-new-row", function () {
             const cloneableRow = $(".cloneable-row").first();
             const row = cloneableRow.clone();
+            row.removeClass("cloneable-row");
             row.insertBefore($(this));
             tippy(".Tooltip", { maxWidth: 160 });
         });
@@ -226,6 +219,7 @@ function initializePageBuilder() {
         $(".btn-new-block").click(function () {
             const cloneableRow = $(".cloneable-block").first();
             const row = cloneableRow.clone();
+            row.find(".Builder:not(.cloneable-row)").remove();
             row.insertBefore($(this));
             tippy(".Tooltip", { maxWidth: 160 });
         });

@@ -78,16 +78,8 @@
             }
         }
 
-        img {
-            &::selection {
-                color: none;
-                background: none;
-            }
-
-            &::-moz-selection {
-                color: none;
-                background: none;
-            }
+        .icon {
+            font-size: 17px;
         }
     }
 
