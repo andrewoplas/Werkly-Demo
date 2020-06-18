@@ -32,41 +32,33 @@
                     }
                 }
             }
+
+            @include media-breakpoint-down(xs) {
+                margin-right: 0;
+                @include flex(space-between, center);
+
+                button {
+                    flex-shrink: 0;
+                }
+            }
         }
 
         .action-items {
             margin-top: 10px;
             flex-wrap: wrap;
-            @include flex(flex-start, center);
+            @include flex(flex-end, center);
 
-            // @include media-breakpoint-down(sm) {
-            //     &:not(.no-flex-basis) {
-            //         flex-basis: 100%;
-            //     }
-            // }
-
-            @include media-breakpoint-down(sm) {
-                justify-content: space-between;
+            @include media-breakpoint-down(xs) {
+                .main-button {
+                    flex-basis: 100%;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
             }
-
-            // @include media-breakpoint-down(sm) {
-            //     .main-button {
-            //         display: block;
-            //         width: 100%;
-            //         margin-top: 10px;
-            //         margin-bottom: 10px;
-            //         max-width: 100%;
-            //     }
-            // }
 
             .tabs {
                 margin-right: 13px;
                 border: 0;
-
-                // @include media-breakpoint-down(sm) {
-                //     width: 100%;
-                //     @include element-center;
-                // }
 
                 li {
                     a {
@@ -86,10 +78,14 @@
                             height: 4px;
                             background: $secondary-color;
                             position: absolute;
-                            bottom: -14px;
+                            bottom: -17px;
                             left: 0;
                         }
                     }
+                }
+
+                @include media-breakpoint-down(xs) {
+                    margin-right: 0;
                 }
             }
         }

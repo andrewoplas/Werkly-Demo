@@ -4,13 +4,27 @@ $header-height: 45px;
 
 .Header {
     .logo-container {
+        position: relative;
         height: 180px;
-        background-image: url("../images/header-top.png");
-        background-size: cover;
-        background-position: center;
 
         &.spacing {
             margin-bottom: $header-height;
+        }
+
+        .background-blur {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-image: url("../images/header-top.png");
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+
+            -webkit-filter: blur(3px);
+            -moz-filter: blur(3px);
+            -o-filter: blur(3px);
+            -ms-filter: blur(3px);
+            filter: blur(3px);
         }
 
         .logo-banner {
