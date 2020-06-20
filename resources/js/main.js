@@ -280,11 +280,13 @@ function initializeLayout13() {
         row.appendTo($("#basictable-checkbox-1 tbody"));
     }
 
+    const isMobile = $(window).width() <= 576;
+    const pagingType = isMobile ? "simple" : "simple_numbers";
     const dataTable = $("#datatable table").DataTable({
         ordering: true,
         order: [1, 2, 3, 4],
         pageLength: 10,
-        pagingType: "simple_numbers",
+        pagingType: pagingType,
         info: false,
         language: { search: "" },
         columnDefs: [
@@ -335,11 +337,13 @@ function initializeLayout13() {
             const currentPageLength = self.page.len();
 
             // Length (bottom)
+            const pageLengthText = isMobile ? " / page" : " per page";
             const pageLengthSelection = $(
                 '<div class="dropdown dropdown-container">' +
                     '<a type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton">' +
                     currentPageLength +
-                    " per page</a>" +
+                    pageLengthText +
+                    "</a>" +
                     '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">' +
                     '   <button value="10" class="dropdown-item" type="button">10 per page</button>' +
                     '   <button value="25" class="dropdown-item" type="button">25 per page</button>' +
@@ -420,12 +424,14 @@ function initializeLayout14() {
         row.appendTo($("#basictable-checkbox-1 tbody"));
     }
 
+    const isMobile = $(window).width() <= 576;
+    const pagingType = isMobile ? "simple" : "simple_numbers";
     const dataTable = $("#datatable table").DataTable({
         ordering: true,
         order: [1, 2, 3, 4],
         pageLength: 10,
         lengthChange: false,
-        pagingType: "simple_numbers",
+        pagingType: pagingType,
         info: false,
         language: { search: "" },
         columnDefs: [
@@ -468,16 +474,26 @@ function initializeLayout14() {
             const currentPageLength = self.page.len();
 
             // Length (bottom)
+            const pageLengthText = isMobile ? " / page" : " per page";
             const pageLengthSelection = $(
                 '<div class="dropdown dropdown-container">' +
                     '<a type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton">' +
                     currentPageLength +
-                    " per page</a>" +
+                    pageLengthText +
+                    "</a>" +
                     '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">' +
-                    '   <button value="10" class="dropdown-item" type="button">10 per page</button>' +
-                    '   <button value="25" class="dropdown-item" type="button">25 per page</button>' +
-                    '   <button value="50" class="dropdown-item" type="button">50 per page</button>' +
-                    '   <button value="100" class="dropdown-item" type="button">100 per page</button>' +
+                    '   <button value="10" class="dropdown-item" type="button">10 ' +
+                    pageLengthText +
+                    "</button>" +
+                    '   <button value="25" class="dropdown-item" type="button">25 ' +
+                    pageLengthText +
+                    "</button>" +
+                    '   <button value="50" class="dropdown-item" type="button">50 ' +
+                    pageLengthText +
+                    "</button>" +
+                    '   <button value="100" class="dropdown-item" type="button">100 ' +
+                    pageLengthText +
+                    "</button>" +
                     "</div>" +
                     "</div>"
             );

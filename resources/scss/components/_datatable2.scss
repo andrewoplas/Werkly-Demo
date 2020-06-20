@@ -161,6 +161,10 @@ $table-header-bg: #fafafa;
             border: 0 !important;
             @include flex(center, center);
 
+            @include media-breakpoint-down(xs) {
+                font-size: 12px;
+            }
+
             &:not(.disabled):not(.active) {
                 &:hover,
                 &:active,
@@ -202,6 +206,10 @@ $table-header-bg: #fafafa;
             .dropdown-toggle {
                 font-size: 14px;
                 font-weight: bold;
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 12px;
+                }
 
                 &::after {
                     margin-left: 10px;

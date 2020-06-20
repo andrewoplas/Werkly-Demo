@@ -2270,6 +2270,11 @@ select.Select:disabled,
   justify-content: center;
   flex-direction: row;
 }
+@media (max-width: 575.98px) {
+  .Datatable-2 .dataTables_paginate .paginate_button {
+    font-size: 12px;
+  }
+}
 .Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):hover, .Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):active, .Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):focus {
   background: rgba(0, 0, 0, 0.1);
   color: #333333 !important;
@@ -2301,6 +2306,11 @@ select.Select:disabled,
 .Datatable-2 .dataTables_paginate .dropdown-container .dropdown-toggle {
   font-size: 14px;
   font-weight: bold;
+}
+@media (max-width: 575.98px) {
+  .Datatable-2 .dataTables_paginate .dropdown-container .dropdown-toggle {
+    font-size: 12px;
+  }
 }
 .Datatable-2 .dataTables_paginate .dropdown-container .dropdown-toggle::after {
   margin-left: 10px;
