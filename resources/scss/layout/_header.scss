@@ -421,6 +421,7 @@ $header-height: 45px;
                     border: 0;
                     border-radius: 0;
                     margin-top: 12px;
+                    @include dropdown-shadow;
 
                     .dropdown-item {
                         font-size: 14px;

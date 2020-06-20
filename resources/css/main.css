@@ -403,6 +403,9 @@
   border: 0;
   border-radius: 0;
   margin-top: 12px;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
 }
 .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item {
   font-size: 14px;
@@ -1131,11 +1134,19 @@ select.Select:disabled,
   flex-shrink: 0;
 }
 .Checkbox label [type=checkbox]:checked + span:before {
-  content: url(../images/check.svg);
+  content: url("../images/check.svg");
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1px;
+  height: 100%;
+}
+.Checkbox label [type=checkbox].minus:checked + span:before {
+  content: url("../images/minus.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
   height: 100%;
 }
 
@@ -1415,6 +1426,15 @@ select.Select:disabled,
   justify-content: center;
   flex-direction: row;
 }
+.Datatable .dataTables_paginate > .paginate_button:first-child {
+  border-left: 1px solid #cccccc !important;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.Datatable .dataTables_paginate > .paginate_button:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 .Datatable .dataTables_paginate .paginate_button {
   height: 22px;
   margin: 0;
@@ -1436,15 +1456,6 @@ select.Select:disabled,
 .Datatable .dataTables_paginate .paginate_button:not(.disabled):not(.active):hover {
   background: rgba(0, 0, 0, 0.1);
   color: #333333 !important;
-}
-.Datatable .dataTables_paginate .paginate_button.first {
-  border-left: 1px solid #cccccc !important;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-.Datatable .dataTables_paginate .paginate_button.last {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 .Datatable .dataTables_paginate .paginate_button.disabled {
   font-family: "Quicksand", sans-serif !important;
@@ -1480,7 +1491,7 @@ select.Select:disabled,
   flex-direction: row;
 }
 .Datatable .dataTables_filter input {
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 11px;
   font-weight: 300;
   padding: 6px 11px;
@@ -2114,6 +2125,437 @@ select.Select:disabled,
 .WYSIWYG + .cke .cke_inner .cke_bottom {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.Datatable-2 {
+  border: 0 !important;
+}
+.Datatable-2 table {
+  padding-top: 15px !important;
+  min-width: 800px;
+}
+.Datatable-2 table thead th {
+  padding: 13px 20px !important;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #dddddd;
+  border-right: 0 !important;
+  vertical-align: middle;
+  background-color: #fafafa;
+  background-image: none !important;
+}
+.Datatable-2 table thead th:last-child {
+  border-right: 1px solid #dddddd !important;
+}
+.Datatable-2 table thead th.square {
+  padding: 13px 15px !important;
+}
+.Datatable-2 table thead th.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: -1px;
+}
+.Datatable-2 table thead th.sorting_desc, .Datatable-2 table thead th.sorting_asc {
+  background-color: #eeeeee;
+}
+.Datatable-2 table thead th.normal-column .sorting-icons {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+  color: #dddddd;
+}
+.Datatable-2 table thead th.normal-column .sorting-icons .desc {
+  margin-top: -8px;
+}
+.Datatable-2 table thead th.normal-column.sorting_asc .asc {
+  color: #333333;
+}
+.Datatable-2 table thead th.normal-column.sorting_desc .desc {
+  color: #333333;
+}
+.Datatable-2 table thead .checkbox-options button {
+  border: 0;
+  padding: 0 5px;
+  background-color: transparent;
+  margin-right: 20px;
+  outline: 0 !important;
+  font-weight: bold;
+  font-size: 14px;
+}
+.Datatable-2 table thead .checkbox-options button i {
+  margin-right: 2px;
+}
+.Datatable-2 table thead .checkbox-options button:hover {
+  opacity: 0.7;
+}
+.Datatable-2 table tbody td {
+  padding: 13px 20px !important;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  border: 0;
+  border-bottom: 1px solid #cccccc !important;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.Datatable-2 table tbody td.square {
+  padding: 13px 15px !important;
+}
+.Datatable-2 table tbody td:first-child {
+  border-left: 1px solid #dddddd;
+}
+.Datatable-2 table tbody td:last-child {
+  border-right: 1px solid #dddddd;
+}
+.Datatable-2 table tbody td .link {
+  font-weight: bold;
+  color: #333333;
+}
+.Datatable-2 .dataTables_length {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333333;
+}
+.Datatable-2 .dataTables_length select {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  border: 1px solid #cccccc;
+  padding: 7px 5px;
+  border-radius: 8px;
+}
+.Datatable-2 .dataTables_info {
+  padding: 0 !important;
+  margin-top: 22px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.Datatable-2 .dataTable.no-footer {
+  border: 0 !important;
+}
+.Datatable-2 .dataTables_paginate {
+  width: 100%;
+  padding: 0 !important;
+  margin-top: 22px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.Datatable-2 .dataTables_paginate > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.Datatable-2 .dataTables_paginate .paginate_button {
+  height: 25px;
+  margin: 0;
+  margin-right: 5px;
+  padding: 4px 7px !important;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333333 !important;
+  border: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):hover, .Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):active, .Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):focus {
+  background: rgba(0, 0, 0, 0.1);
+  color: #333333 !important;
+}
+.Datatable-2 .dataTables_paginate .paginate_button.disabled {
+  font-family: "Quicksand", sans-serif !important;
+  font-weight: 300 !important;
+  color: #cccccc !important;
+}
+.Datatable-2 .dataTables_paginate .paginate_button.disabled:hover {
+  color: #cccccc !important;
+}
+.Datatable-2 .dataTables_paginate .paginate_button.current {
+  background: #eeeeee !important;
+  font-weight: bold;
+}
+.Datatable-2 .dataTables_paginate .ellipsis {
+  height: 22px;
+  padding: 2px 7px !important;
+  line-height: 1;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 0;
+}
+.Datatable-2 .dataTables_paginate .dropdown-container {
+  margin-left: 20px;
+}
+.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-toggle {
+  font-size: 14px;
+  font-weight: bold;
+}
+.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-toggle::after {
+  margin-left: 10px;
+  vertical-align: 1px;
+}
+.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-menu {
+  border-radius: 0;
+  border: 0;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+}
+.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-menu.show {
+  padding: 0;
+  min-width: auto;
+  float: none;
+  right: 0;
+}
+.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-menu .dropdown-item {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-menu .dropdown-item.active {
+  background-color: white;
+  color: #7fb800;
+  font-weight: bold;
+}
+.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-menu .dropdown-item:active {
+  background-color: #7fb800;
+  outline: 0 !important;
+}
+.Datatable-2 .dataTables_filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.Datatable-2 .dataTables_filter input {
+  padding: 8px 16px;
+  width: 220px;
+  height: 100%;
+  background-color: #fafafa;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.Datatable-2 .dataTables_filter label {
+  margin: 0;
+  align-self: stretch;
+}
+.Datatable-2 .dataTables_filter button {
+  align-self: stretch;
+  min-width: 36px;
+}
+
+.TableFilter .main > .item {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 2px;
+  background-color: white;
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 4px;
+  text-align: left;
+  outline: 0;
+}
+.TableFilter .main > .item:not(.active):hover {
+  background-color: #f7f7f7;
+  text-decoration: underline !important;
+}
+.TableFilter .main > .item.active {
+  background-color: #eeeeee;
+}
+.TableFilter .main > .item.show-filters .arrow {
+  margin-left: 8px;
+}
+.TableFilter .main .add-filter-container {
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+}
+.TableFilter .main .add-filter-container .header {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+.TableFilter .main .add-filter-container .count {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: #333333;
+}
+@media (min-width: 576px) {
+  .TableFilter .main .add-filter-container .dropdown-options {
+    text-align: right;
+  }
+}
+.TableFilter .main .add-filter-container .dropdown-options .dropdown-toggle {
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+}
+.TableFilter .main .add-filter-container .dropdown-options .dropdown-menu {
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+}
+.TableFilter .main .add-filter-container .dropdown-options .dropdown-menu .dropdown-item {
+  font-size: 12px;
+  padding: 10px 15px;
+  outline: 0;
+}
+.TableFilter .main .add-filter-container .dropdown-options .dropdown-menu .dropdown-item:focus, .TableFilter .main .add-filter-container .dropdown-options .dropdown-menu .dropdown-item:active {
+  background-color: #7fb800;
+}
+.TableFilter .main .add-filter-container .dropdown-options .dropdown-menu .dropdown-divider {
+  margin: 0;
+}
+.TableFilter .main .add-filter-container .filters-list {
+  margin-top: 10px;
+}
+.TableFilter .main .add-filter-container .filters-list .item {
+  padding: 8px 10px;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  font-size: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: row;
+}
+.TableFilter .main .add-filter-container .filters-list .item.cloneable-row {
+  display: none;
+}
+.TableFilter .main .add-filter-container .filters-list .item .description {
+  margin-right: 10px;
+}
+.TableFilter .main .add-filter-container .filters-list .item .remove {
+  margin-left: auto;
+  cursor: pointer;
+}
+.TableFilter .main .add-filter-container .btn-filter {
+  padding: 4px 0;
+  margin-top: 10px;
+  background-color: white;
+  border: 0;
+  font-size: 14px;
+  outline: 0;
+}
+.TableFilter .main .add-filter-container .btn-filter:hover {
+  text-decoration: underline !important;
+}
+.TableFilter .main .action-buttons {
+  margin-top: 10px;
+  display: none;
+}
+.TableFilter .select-filters-container .filters {
+  max-height: 400px;
+  margin-top: 15px;
+  overflow-y: auto;
+}
+.TableFilter .select-filters-container .filters .header {
+  display: block;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+}
+.TableFilter .select-filters-container .filters .item {
+  display: block;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #333333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.TableFilter .select-filters-container .filters .item:hover {
+  background-color: #f7f7f7;
+}
+.TableFilter .select-filters-value .options {
+  padding: 15px 0;
+}
+.TableFilter .select-filters-value .options .item {
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+.TableFilter .select-filters-value .options .item .selector {
+  margin-top: 7px;
+}
+.TableFilter .select-filters-value .option-selected {
+  margin-top: 23px;
+  padding-left: 15px;
+}
+.TableFilter .select-filters-value .option-selected .title {
+  display: block;
+  font-weight: bold;
+}
+.TableFilter .select-filters-value .option-selected .description {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+}
+.TableFilter .select-filters-value .btn-apply-filter {
+  display: none;
+  margin-left: 15px;
+}
+.TableFilter .btn-back {
+  padding: 0;
+  border: 0;
+  background-color: white;
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+  outline: 0;
+}
+
+.FiltersContainer .column:first-child .item, .FiltersContainer .column:last-child .item {
+  padding: 0 15px;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+.FiltersContainer .column .item {
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .FiltersContainer .column .item {
+    min-height: 400px;
+  }
+}
+.FiltersContainer .title {
+  margin-top: 10px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 14px;
+}
+.FiltersContainer ul.list {
+  margin-top: 5px;
+  padding-left: 0;
+  list-style-type: none;
+}
+.FiltersContainer ul.list li {
+  padding: 5px 5px 5px 20px;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.FiltersContainer ul.list li:hover {
+  background-color: #f7f7f7;
 }
 
 * {

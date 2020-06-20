@@ -270,3 +270,283 @@ function initializeDashboard() {
 function initializeNews() {
     $(".carousel").carousel();
 }
+
+function initializeLayout13() {
+    const table = $("#datatable table");
+    // Clone rows in basic table 1
+    for (let i = 0; i < 100; i++) {
+        const row = $("#basictable-checkbox-1 .clone-for-demo").clone();
+        row.removeClass("clone-for-demo");
+        row.appendTo($("#basictable-checkbox-1 tbody"));
+    }
+
+    const dataTable = $("#datatable table").DataTable({
+        ordering: true,
+        order: [1, 2, 3, 4],
+        pageLength: 10,
+        pagingType: "simple_numbers",
+        info: false,
+        language: { search: "" },
+        columnDefs: [
+            {
+                orderable: false,
+                className: "Checkbox",
+                targets: "no-sort",
+            },
+        ],
+        select: {
+            style: "os",
+            selector: "td:first-child",
+        },
+
+        initComplete: function (element) {
+            const wrapper = $(element.nTableWrapper);
+            const table = $(element.nTable);
+            const input = wrapper.find(".dataTables_filter input").unbind();
+            const self = this.api();
+
+            // Wrap with table responsive
+            table.wrap('<div class="table-responsive"></div>');
+
+            // Button (left side)
+            const filterButton = $('<button class="Button secondary icon">' + '<i class="fas fa-filter text-white"></i>' + "</button>").click(
+                function () {
+                    alert("Filter button clicked");
+                }
+            );
+            wrapper.find(".dataTables_length").html(filterButton);
+
+            // Search button (right side)
+            const searchButton = $('<button class="Button icon ml-2">' + '<i class="fas fa-ellipsis-v"></i>' + "</button>").click(function () {
+                self.search(input.val()).draw();
+            });
+
+            input.addClass("Input search");
+            input.prop("placeholder", "Search");
+            input.change(function () {
+                if (input.val().length == 0) self.search("").draw();
+            });
+            wrapper.find(".dataTables_filter").append(searchButton);
+        },
+
+        drawCallback: function (element) {
+            const wrapper = $(element.nTableWrapper);
+            const self = this.api();
+            const currentPageLength = self.page.len();
+
+            // Length (bottom)
+            const pageLengthSelection = $(
+                '<div class="dropdown dropdown-container">' +
+                    '<a type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton">' +
+                    currentPageLength +
+                    " per page</a>" +
+                    '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">' +
+                    '   <button value="10" class="dropdown-item" type="button">10 per page</button>' +
+                    '   <button value="25" class="dropdown-item" type="button">25 per page</button>' +
+                    '   <button value="50" class="dropdown-item" type="button">50 per page</button>' +
+                    '   <button value="100" class="dropdown-item" type="button">100 per page</button>' +
+                    "</div>" +
+                    "</div>"
+            );
+            pageLengthSelection.find(".dropdown-item").removeClass("active");
+            pageLengthSelection.find('.dropdown-item[value="' + currentPageLength + '"]').addClass("active");
+            pageLengthSelection.find(".dropdown-item").click(function () {
+                self.page.len($(this).attr("value")).draw();
+            });
+
+            wrapper.find(".dataTables_paginate").append(pageLengthSelection);
+        },
+    });
+
+    const checkboxOnchange = function (tableName) {
+        const table = $(tableName);
+        const checkboxOptions = $(
+            '<th class="checkbox-options" colspan="4">' +
+                '<button value="Delete" class="btn-delete"><i class="fas fa-trash"></i> Delete</button>' +
+                '<button value="Archive" class="btn-archive"><i class="fas fa-archive"></i> Archive</button>' +
+                "</th>"
+        );
+        $(document).on("click", ".checkbox-options .btn-delete, .checkbox-options .btn-archive", function () {
+            alert($(this).attr("value") + " clicked");
+        });
+
+        table.find('th [type="checkbox"]').on("change", function () {
+            let isChecked = $(this).is(":checked");
+            const name = $(this).attr("name");
+
+            if ($(this).hasClass("minus")) {
+                $(this).prop("checked", true);
+                isChecked = true;
+            }
+
+            $(this).removeClass("minus");
+            table.find('tbody [name="' + name + '"]').prop("checked", isChecked);
+            showHideCheckboxOptions(isChecked);
+        });
+
+        table.find('td [type="checkbox"]').on("change", function () {
+            const totalCheckboxes = table.find('tbody [type="checkbox"]').length;
+            const checkedCount = table.find('tbody [type="checkbox"]:checked').length;
+            showHideCheckboxOptions(checkedCount > 0);
+            table.find('th [type="checkbox"]').prop("checked", checkedCount > 0);
+
+            if (totalCheckboxes === checkedCount) {
+                table.find('th [type="checkbox"]').removeClass("minus");
+            } else {
+                table.find('th [type="checkbox"]').addClass("minus");
+            }
+        });
+
+        const showHideCheckboxOptions = function (shouldShow) {
+            if (shouldShow) {
+                table.find(".normal-column").hide();
+                table.find("thead tr").append(checkboxOptions);
+            } else {
+                table.find(".normal-column").show();
+                table.find("thead tr th.checkbox-options").remove();
+            }
+        };
+    };
+
+    checkboxOnchange("#basictable-checkbox-1");
+}
+
+function initializeLayout14() {
+    const table = $("#datatable table");
+    // Clone rows in basic table 1
+    for (let i = 0; i < 100; i++) {
+        const row = $("#basictable-checkbox-1 .clone-for-demo").clone();
+        row.removeClass("clone-for-demo");
+        row.appendTo($("#basictable-checkbox-1 tbody"));
+    }
+
+    const dataTable = $("#datatable table").DataTable({
+        ordering: true,
+        order: [1, 2, 3, 4],
+        pageLength: 10,
+        lengthChange: false,
+        pagingType: "simple_numbers",
+        info: false,
+        language: { search: "" },
+        columnDefs: [
+            {
+                orderable: false,
+                className: "Checkbox",
+                targets: "no-sort",
+            },
+        ],
+        select: {
+            style: "os",
+            selector: "td:first-child",
+        },
+
+        initComplete: function (element) {
+            const wrapper = $(element.nTableWrapper);
+            const table = $(element.nTable);
+            const input = wrapper.find(".dataTables_filter input").unbind();
+            const self = this.api();
+
+            // Wrap with table responsive
+            table.wrap('<div class="table-responsive"></div>');
+
+            // Search button (right side)
+            const searchButton = $('<button class="Button icon ml-2">' + '<i class="fas fa-ellipsis-v"></i>' + "</button>").click(function () {
+                self.search(input.val()).draw();
+            });
+
+            input.addClass("Input search");
+            input.prop("placeholder", "Search");
+            input.change(function () {
+                if (input.val().length == 0) self.search("").draw();
+            });
+            wrapper.find(".dataTables_filter").append(searchButton);
+        },
+
+        drawCallback: function (element) {
+            const wrapper = $(element.nTableWrapper);
+            const self = this.api();
+            const currentPageLength = self.page.len();
+
+            // Length (bottom)
+            const pageLengthSelection = $(
+                '<div class="dropdown dropdown-container">' +
+                    '<a type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton">' +
+                    currentPageLength +
+                    " per page</a>" +
+                    '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">' +
+                    '   <button value="10" class="dropdown-item" type="button">10 per page</button>' +
+                    '   <button value="25" class="dropdown-item" type="button">25 per page</button>' +
+                    '   <button value="50" class="dropdown-item" type="button">50 per page</button>' +
+                    '   <button value="100" class="dropdown-item" type="button">100 per page</button>' +
+                    "</div>" +
+                    "</div>"
+            );
+            pageLengthSelection.find(".dropdown-item").removeClass("active");
+            pageLengthSelection.find('.dropdown-item[value="' + currentPageLength + '"]').addClass("active");
+            pageLengthSelection.find(".dropdown-item").click(function () {
+                self.page.len($(this).attr("value")).draw();
+            });
+
+            wrapper.find(".dataTables_paginate").append(pageLengthSelection);
+        },
+    });
+
+    const checkboxOnchange = function (tableName) {
+        const table = $(tableName);
+        const checkboxOptions = $(
+            '<th class="checkbox-options" colspan="4">' +
+                '<button value="Delete" class="btn-delete"><i class="fas fa-trash"></i> Delete</button>' +
+                '<button value="Archive" class="btn-archive"><i class="fas fa-archive"></i> Archive</button>' +
+                "</th>"
+        );
+        $(document).on("click", ".checkbox-options .btn-delete, .checkbox-options .btn-archive", function () {
+            alert($(this).attr("value") + " clicked");
+        });
+
+        table.find('th [type="checkbox"]').on("change", function () {
+            let isChecked = $(this).is(":checked");
+            const name = $(this).attr("name");
+
+            if ($(this).hasClass("minus")) {
+                $(this).prop("checked", true);
+                isChecked = true;
+            }
+
+            $(this).removeClass("minus");
+            table.find('tbody [name="' + name + '"]').prop("checked", isChecked);
+            showHideCheckboxOptions(isChecked);
+        });
+
+        table.find('td [type="checkbox"]').on("change", function () {
+            const totalCheckboxes = table.find('tbody [type="checkbox"]').length;
+            const checkedCount = table.find('tbody [type="checkbox"]:checked').length;
+            showHideCheckboxOptions(checkedCount > 0);
+            table.find('th [type="checkbox"]').prop("checked", checkedCount > 0);
+
+            if (totalCheckboxes === checkedCount) {
+                table.find('th [type="checkbox"]').removeClass("minus");
+            } else {
+                table.find('th [type="checkbox"]').addClass("minus");
+            }
+        });
+
+        const showHideCheckboxOptions = function (shouldShow) {
+            if (shouldShow) {
+                table.find(".normal-column").hide();
+                table.find("thead tr").append(checkboxOptions);
+            } else {
+                table.find(".normal-column").show();
+                table.find("thead tr th.checkbox-options").remove();
+            }
+        };
+    };
+
+    checkboxOnchange("#basictable-checkbox-1");
+
+    // Table Filters
+    if (initializeTableFilterListeners) {
+        initializeTableFilterListeners();
+    } else {
+        console.error("Could not find initializeTableFilterListeners method");
+    }
+}

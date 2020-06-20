@@ -37,6 +37,9 @@
 @import "./components/activity-log";
 @import "./components/setup-wizard";
 @import "./components/wysiwyg";
+@import "./components/datatable2";
+@import "./components/table-filter";
+@import "./components/filters-container";
 
 * {
     font-family: $primary-font;
