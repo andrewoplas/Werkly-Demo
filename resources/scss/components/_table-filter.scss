@@ -47,9 +47,7 @@
             }
 
             .dropdown-options {
-                @include media-breakpoint-up(sm) {
-                    text-align: right;
-                }
+                text-align: right;
 
                 .dropdown-toggle {
                     font-size: 11px;

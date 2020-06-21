@@ -250,7 +250,8 @@ $table-header-bg: #fafafa;
     }
 
     .dataTables_filter {
-        @include flex(center, center);
+        margin-top: 0 !important;
+        @include flex(flex-end, center);
 
         input {
             padding: 8px 16px;
@@ -261,6 +262,10 @@ $table-header-bg: #fafafa;
             border-radius: 4px;
             font-size: 14px;
             font-weight: 300;
+
+            @include media-breakpoint-down(xs) {
+                width: 150px;
+            }
         }
 
         label {
