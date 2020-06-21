@@ -2503,11 +2503,11 @@ select.Select:disabled,
 .TableFilter .select-filters-value .options {
   padding: 15px 0;
 }
-.TableFilter .select-filters-value .options .item {
+.TableFilter .select-filters-value .options > .item {
   margin-bottom: 10px;
   padding-left: 15px;
 }
-.TableFilter .select-filters-value .options .item .selector {
+.TableFilter .select-filters-value .options > .item .selector {
   margin-top: 7px;
 }
 .TableFilter .select-filters-value .option-selected {

@@ -110,6 +110,7 @@ function selectFiltersOptionsListeners() {
         tableFilter.find(".select-filters-value .options .item [type='radio']").prop("checked", false);
         tableFilter.find(".select-filters-value .options .item [type='text']").val("");
         tableFilter.find(".select-filters-value .options .item select").prop("selectedIndex", 0);
+        $(".ui.dropdown").dropdown("clear");
 
         showScreen(".select-filters-value");
     });
@@ -140,9 +141,17 @@ function selectFiltersValueListeners() {
         const selected = tableFilter.find(".select-filters-value .options .item .choice:checked");
 
         if (selected.length) {
+            const queryValueElement = selected.parents(".item").find(".query-value:not(.d-none)");
+
             const filterName = tableFilter.find(".select-filters-value .option-selected .title").text();
             const condition = selected.val();
-            const value = selected.parents(".item").find(".query-value:not(.d-none)").val();
+
+            let value = "";
+            if (queryValueElement.hasClass("Select")) {
+                value = queryValueElement.dropdown("get value");
+            } else {
+                value = selected.parents(".item").find(".query-value:not(.d-none)").val();
+            }
 
             if (value) {
                 addFilter(filterName, condition, value);
