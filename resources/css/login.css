@@ -2568,6 +2568,104 @@ select.Select:disabled,
   background-color: #f7f7f7;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.AdvanceTable .filter-configuration-panel {
+  width: 20%;
+  margin-bottom: 20px;
+  transition: 300ms;
+}
+.AdvanceTable .filter-configuration-panel .btn-show-filter {
+  z-index: 9999;
+  position: relative;
+  margin-left: 0;
+  margin-left: 15px;
+}
+.AdvanceTable .filter-configuration-panel .TableFilter {
+  padding: 0 15px;
+}
+.AdvanceTable .filter-configuration-panel:not(.shown) {
+  width: 0;
+  transition: ease-in 300ms;
+}
+.AdvanceTable .filter-configuration-panel:not(.shown) + .panel {
+  width: 100% !important;
+  transition: ease-in 300ms;
+}
+.AdvanceTable .filter-configuration-panel:not(.shown) .TableFilter {
+  opacity: 0;
+  transition: 200ms;
+}
+.AdvanceTable .filter-configuration-panel.shown .TableFilter {
+  animation: fadeIn ease-in 500ms;
+}
+.AdvanceTable .table-panel {
+  padding: 0 15px;
+  width: 80%;
+  transition: 300ms;
+}
+.AdvanceTable .filters-panel {
+  padding: 0 15px;
+  width: 80%;
+  transition: 300ms;
+}
+@media (max-width: 1199.98px) {
+  .AdvanceTable .filter-configuration-panel {
+    width: 30%;
+  }
+  .AdvanceTable .table-panel,
+.AdvanceTable .filters-panel {
+    width: 70%;
+  }
+}
+@media (max-width: 991.98px) {
+  .AdvanceTable .filter-configuration-panel {
+    width: 100%;
+  }
+  .AdvanceTable .table-panel,
+.AdvanceTable .filters-panel {
+    width: 100%;
+  }
+}
+
 * {
   font-family: "Nunito", sans-serif;
 }

@@ -417,12 +417,16 @@ function initializeLayout13() {
 
 function initializeLayout14() {
     const table = $("#datatable table");
-    // Clone rows in basic table 1
+    // Clone rows in basic table 1 (You can remove this one)
     for (let i = 0; i < 100; i++) {
         const row = $("#basictable-checkbox-1 .clone-for-demo").clone();
         row.removeClass("clone-for-demo");
         row.appendTo($("#basictable-checkbox-1 tbody"));
     }
+
+    $(".btn-show-filter").click(function () {
+        $(".filter-configuration-panel").toggleClass("shown");
+    });
 
     const isMobile = $(window).width() <= 576;
     const pagingType = isMobile ? "simple" : "simple_numbers";
