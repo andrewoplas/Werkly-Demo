@@ -9,7 +9,7 @@ $animationDuration: 300ms;
         transition: $animationDuration;
 
         .btn-show-filter {
-            z-index: 9999;
+            z-index: 1;
             position: relative;
             margin-left: 0;
             margin-left: 15px;
