@@ -417,6 +417,10 @@ function initializeLayout13() {
 
 function initializeLayout14() {
     const table = $("#datatable table");
+
+    // initialize dropdown
+    $(".ui.dropdown").dropdown();
+
     // Clone rows in basic table 1 (You can remove this one)
     for (let i = 0; i < 100; i++) {
         const row = $("#basictable-checkbox-1 .clone-for-demo").clone();
